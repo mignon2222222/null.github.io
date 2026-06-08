@@ -1,0 +1,8 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="SVG">
+<path id="Vector" d="M10 50C10 72.0766 27.9234 90 50 90C72.0766 90 90 72.0766 90 50C90 27.9234 72.0766 10 50 10C27.9234 10 10 27.9234 10 50V50" stroke="var(--stroke-0, #1A1A1A)"/>
+<path id="Vector_2" d="M25 50C25 63.7979 36.2021 75 50 75C63.7979 75 75 63.7979 75 50C75 36.2021 63.7979 25 50 25C36.2021 25 25 36.2021 25 50V50" stroke="var(--stroke-0, #333333)"/>
+<path id="Vector_3" d="M40 50C40 55.5192 44.4808 60 50 60C55.5192 60 60 55.5192 60 50C60 44.4808 55.5192 40 50 40C44.4808 40 40 44.4808 40 50V50" stroke="var(--stroke-0, white)" stroke-opacity="0.5"/>
+<path id="Vector_4" d="M47 50C47 51.6557 48.3443 53 50 53C51.6557 53 53 51.6557 53 50C53 48.3443 51.6557 47 50 47C48.3443 47 47 48.3443 47 50V50" fill="var(--fill-0, white)"/>
+</g>
+</svg>

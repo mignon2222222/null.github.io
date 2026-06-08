@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Behavior Analysis Lab</title>
+  <link rel="stylesheet" href="./index.css?v=4.6">
+</head>
+
+<body>
+
+  <!-- ================= LOG IN GATE SCREEN ================= -->
+  <div id="gate-screen" class="gate-screen">
+    <div class="login-container">
+      <div class="login-header">
+        <span class="subtitle">Human Behavior Analysis Lab</span>
+        <h1 class="main-title">Ø/01</h1>
+      </div>
+
+      <form id="login-form" class="login-form">
+        <label for="access-code" class="input-label">ENTER PASSWORD</label>
+        <div class="input-group">
+          <input type="text" id="access-code" placeholder="ACCESS CODE" autocomplete="off" maxlength="8">
+          <button type="submit" id="enter-btn">ENTER</button>
+        </div>
+      </form>
+
+      <div class="login-footer">
+        <span class="footer-left">NULL009</span>
+        <span class="footer-right">ATTEMPTS / <span id="attempt-count">0</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= DASHBOARD SCREEN ================= -->
+  <div id="dashboard-screen" class="dashboard-screen hidden">
+
+    <!-- Navigation Header -->
+    <header class="navbar animate-in">
+      <div class="nav-logo">
+        <span class="logo-bold">NULL ―</span>
+        <span class="logo-sub">Human Behavior Analysis Lab</span>
+      </div>
+
+      <nav class="nav-links">
+        <div class="nav-dropdown" id="dropdown-system">
+          <a href="#home" class="nav-link active" id="nav-system">SYSTEM</a>
+          <div class="submenu-bar">
+            <div class="submenu-content">
+              <a href="#home" class="submenu-item" id="sub-system-main">MAIN</a>
+              <a href="#system" class="submenu-item" id="sub-system-lab">LAB IDENTITY</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-dropdown" id="dropdown-observation">
+          <a href="#observation" class="nav-link" id="nav-observation">OBSERVATION</a>
+          <div class="submenu-bar">
+            <div class="submenu-content">
+              <a href="#observation" class="submenu-item" id="sub-obs-wall">OBSERVATION WALL</a>
+              <a href="#sub-observation" class="submenu-item" id="sub-obs-subject">SUBJECT OBSERVATION</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-dropdown" id="dropdown-analysis">
+          <a href="#analysis" class="nav-link" id="nav-analysis">ANALYSIS</a>
+          <div class="submenu-bar">
+            <div class="submenu-content">
+              <a href="#behavior-observation" class="submenu-item" id="sub-ana-behavior">BEHAVIOR OBSERVATION</a>
+              <a href="#analysis" class="submenu-item" id="sub-ana-analysis">BEHAVIOR ANALYSIS</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="#archive" class="nav-link">ARCHIVE</a>
+        <a href="#protocol" class="nav-link">PROTOCOL</a>
+      </nav>
+
+      <div class="nav-badge">
+        <span>Ø/01</span>
+        <span class="badge-dot"></span>
+      </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-container">
+
+      <!-- ================= VIEW 1: SYSTEM VIEW ================= -->
+      <div id="system-view" class="view-panel" style="max-width: 1488px !important;">
+        <!-- Hero Title Section -->
+        <section class="hero-section" id="hero-section">
+          <h1 class="hero-title-null animate-in">NULL</h1>
+          <h2 class="hero-title-lab">Human Behavior Analysis Lab</h2>
+          <p class="hero-note">A neutral system for observing, classifying, and outputting human behavior.</p>
+        </section>
+
+        <!-- Surveillance Display -->
+        <section class="surveillance-section" id="surveillance-section">
+          <div class="surveillance-wrapper" id="surveillance-wrapper">
+            <video id="main-surveillance-video" src="assets/MAIN (2).mp4" muted playsinline
+              class="surveillance-video"></video>
+            <div class="scanline-overlay" style="background-image: url('assets/scanline.png');"></div>
+
+            <!-- Fullscreen controls -->
+            <div class="surv-fullscreen-control">
+              <span class="fs-text">SURVEILLANCE HUD // MONITORED_MODE</span>
+              <button class="exit-fs-btn" id="exit-fs-btn">MINIMIZE [ESC]</button>
+            </div>
+
+
+
+            <!-- Surveillance Labels -->
+            <div class="surv-label surv-rec">
+              <span class="rec-dot"></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dashboard Content Section (Slide 3) -->
+        <section class="dashboard-content-section" id="dashboard-content-section">
+          <!-- Feature Grid Section -->
+          <div class="features-section">
+            <div class="features-grid">
+              <!-- Observe Column -->
+              <article class="feature-card">
+                <div class="feature-header">
+                  <span class="feature-num">0 1</span>
+                  <span class="feature-rec">REC</span>
+                </div>
+                <div class="feature-icon-box">
+                  <div class="observe-icon">
+                    <div class="obs-circle-outer"></div>
+                    <div class="obs-circle-inner"></div>
+                    <div class="obs-cross-v"></div>
+                    <div class="obs-cross-h"></div>
+                  </div>
+                </div>
+                <h3 class="feature-title">OBSERVE</h3>
+                <p class="feature-desc">Observes where user choices begin to emerge.</p>
+                <div class="feature-footer">
+                  <div class="dot-pattern">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                  <span class="arrow-btn">&gt;</span>
+                </div>
+              </article>
+
+              <!-- Classify Column -->
+              <article class="feature-card">
+                <div class="feature-header">
+                  <span class="feature-num">0 2</span>
+                  <span class="feature-rec">REC</span>
+                </div>
+                <div class="feature-icon-box">
+                  <div class="classify-icon">
+                    <div class="grid-square opacity-40"></div>
+                    <div class="grid-square"></div>
+                    <div class="grid-square"></div>
+                    <div class="grid-square opacity-40"></div>
+                  </div>
+                </div>
+                <h3 class="feature-title">CLASSIFY</h3>
+                <p class="feature-desc">Classifies repeated inputs by structure and rule.</p>
+                <div class="feature-footer">
+                  <div class="dot-pattern">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                  <span class="arrow-btn">&gt;</span>
+                </div>
+              </article>
+
+              <!-- Output Column -->
+              <article class="feature-card">
+                <div class="feature-header">
+                  <span class="feature-num">0 3</span>
+                  <span class="feature-rec">REC</span>
+                </div>
+                <div class="feature-icon-box">
+                  <div class="output-icon">
+                    <div class="bar bar-1"></div>
+                    <div class="bar bar-2"></div>
+                    <div class="bar bar-3"></div>
+                  </div>
+                </div>
+                <h3 class="feature-title">OUTPUT</h3>
+                <p class="feature-desc">Outputs classified data as an analytical model.</p>
+                <div class="feature-footer">
+                  <div class="dot-pattern">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                  <span class="arrow-btn">&gt;</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Data Cards Bar -->
+          <div class="databar-section">
+            <div class="databar-grid">
+              <!-- Card 1: Subject -->
+              <div class="data-card">
+                <div class="card-icon-wrapper">
+                  <img src="assets/subject.png" alt="Subject" class="card-icon">
+                </div>
+                <div class="card-info">
+                  <div class="card-title">SUBJECT_009</div>
+                  <div class="card-value">STATUS: <span class="text-red">MONITORED</span></div>
+                </div>
+              </div>
+              <!-- Card 2: Tracking -->
+              <div class="data-card">
+                <div class="card-icon-wrapper">
+                  <img src="assets/tracking.png" alt="Tracking" class="card-icon">
+                </div>
+                <div class="card-info">
+                  <div class="card-title">TRACKING</div>
+                  <div class="card-value text-red">ACTIVE</div>
+                </div>
+              </div>
+              <!-- Card 3: Zone -->
+              <div class="data-card">
+                <div class="card-icon-wrapper">
+                  <img src="assets/zone.png" alt="Zone" class="card-icon">
+                </div>
+                <div class="card-info">
+                  <div class="card-title">ZONE</div>
+                  <div class="card-value text-red">A1</div>
+                </div>
+              </div>
+              <!-- Card 4: Feed Quality -->
+              <div class="data-card">
+                <div class="card-icon-wrapper">
+                  <img src="assets/feed_quality.png" alt="Feed Quality" class="card-icon">
+                </div>
+                <div class="card-info">
+                  <div class="card-title">FEED QUALITY</div>
+                  <div class="card-value text-red">99.2%</div>
+                </div>
+              </div>
+              <!-- Card 5: Time Sync -->
+              <div class="data-card">
+                <div class="card-icon-wrapper">
+                  <img src="assets/time_sync.png" alt="Time Sync" class="card-icon">
+                </div>
+                <div class="card-info">
+                  <div class="card-title">TIME SYNC</div>
+                  <div id="time-display" class="card-value">--:--:--</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= VIEW 3: SYSTEM PAGE VIEW ================= -->
+      <div id="system-page-view" class="view-panel hidden" style="max-width: 1488px !important;">
+
+        <!-- Title Section -->
+        <section class="sys-title-section">
+          <div class="sys-header-tag">Ø/01 // CAMERA CHANNEL INDEX</div>
+          <h1 class="sys-main-title">LAB IDENTITY</h1>
+          <p class="sys-description">관찰 대상의 실시간 피드와 저장된 데이터를 확인하십시오. 접속 권한에 따라 채널 상태가 다를 수 있습니다.</p>
+        </section>
+
+        <!-- Main Grid Container -->
+        <section class="sys-grid-section">
+
+          <!-- Section 1: Brand Definition -->
+          <div class="sys-grid-row">
+            <div class="sys-grid-left">
+              <span class="sys-row-num">01</span>
+              <h2 class="sys-row-title">BRAND DEFINITION</h2>
+            </div>
+            <div class="sys-grid-right sys-border-left">
+              <p class="sys-text-muted">
+                NULL observes human behavior, classifies repeated patterns, and outputs them as controlled data.<br>
+                It operates through structure, record, interface, and system rather than emotional narrative.
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 2: Identity Keywords -->
+          <div class="sys-grid-row">
+            <div class="sys-grid-left">
+              <span class="sys-row-num">02</span>
+              <h2 class="sys-row-title">IDENTITY KEYWORDS</h2>
+            </div>
+            <div class="sys-grid-right">
+              <div class="keyword-cards-grid">
+                <!-- Card 1: Neutral -->
+                <div class="keyword-card">
+                  <div class="keyword-card-num">01</div>
+                  <h3 class="keyword-card-title">NEUTRAL</h3>
+                  <p class="keyword-card-desc">Emotion is removed.<br>Only behavior remains.</p>
+                  <div class="keyword-card-icon">
+                    <img src="assets/neutral.svg" alt="Neutral Icon">
+                  </div>
+                </div>
+                <!-- Card 2: Structural -->
+                <div class="keyword-card">
+                  <div class="keyword-card-num">02</div>
+                  <h3 class="keyword-card-title">STRUCTURAL</h3>
+                  <p class="keyword-card-desc">Every signal is<br>organized by rule.</p>
+                  <div class="keyword-card-icon">
+                    <img src="assets/structural.svg" alt="Structural Icon">
+                  </div>
+                </div>
+                <!-- Card 3: Functional -->
+                <div class="keyword-card">
+                  <div class="keyword-card-num">03</div>
+                  <h3 class="keyword-card-title">FUNCTIONAL</h3>
+                  <p class="keyword-card-desc">The interface is<br>the brand.</p>
+                  <div class="keyword-card-icon">
+                    <img src="assets/functional.svg" alt="Functional Icon">
+                  </div>
+                </div>
+                <!-- Card 4: Controlled -->
+                <div class="keyword-card">
+                  <div class="keyword-card-num">04</div>
+                  <h3 class="keyword-card-title">CONTROLLED</h3>
+                  <p class="keyword-card-desc">Nothing is expressive.<br>Everything is regulated.</p>
+                  <div class="keyword-card-icon">
+                    <img src="assets/controlled.svg?v=2.4" alt="Controlled Icon">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: From Typeface to System -->
+          <div class="sys-grid-row">
+            <div class="sys-grid-left">
+              <span class="sys-row-num">03</span>
+              <h2 class="sys-row-title">FROM TYPEFACE<br>TO SYSTEM</h2>
+            </div>
+            <div class="sys-grid-right sys-border-left">
+              <div class="typeface-list">
+                <!-- Item 1 -->
+                <div class="typeface-item">
+                  <span class="typeface-item-num">01</span>
+                  <p class="typeface-item-text">Neutral form becomes <span class="text-white font-bold">neutral
+                      observation.</span></p>
+                </div>
+                <!-- Item 2 -->
+                <div class="typeface-item">
+                  <span class="typeface-item-num">02</span>
+                  <p class="typeface-item-text">Clear structure becomes <span class="text-white font-bold">classified
+                      data.</span></p>
+                </div>
+                <!-- Item 3 -->
+                <div class="typeface-item">
+                  <span class="typeface-item-num">03</span>
+                  <p class="typeface-item-text">Functional typography becomes <span class="text-white font-bold">system
+                      interface.</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4: Visual System -->
+          <div class="sys-grid-row">
+            <div class="sys-grid-left">
+              <span class="sys-row-num">04</span>
+              <h2 class="sys-row-title">VISUAL SYSTEM</h2>
+            </div>
+            <div class="sys-grid-right">
+              <div class="visual-system-box">
+                <!-- Visual Item 1: Color -->
+                <div class="visual-system-item">
+                  <div class="visual-item-icon-wrapper">
+                    <img src="assets/color.svg?v=2.5" alt="Color SVG" class="visual-item-icon">
+                  </div>
+                  <h3 class="visual-item-title">COLOR</h3>
+                  <p class="visual-item-desc">Black / White /<br>Gray / Signal Red</p>
+                </div>
+                <!-- Visual Item 2: Type -->
+                <div class="visual-system-item">
+                  <div class="visual-item-icon-wrapper">
+                    <span class="visual-type-text">Aa</span>
+                  </div>
+                  <h3 class="visual-item-title">TYPE</h3>
+                  <p class="visual-item-desc">Neue Haas Grotesk</p>
+                </div>
+                <!-- Visual Item 3: Layout -->
+                <div class="visual-system-item">
+                  <div class="visual-item-icon-wrapper">
+                    <img src="assets/layout.svg" alt="Layout SVG" class="visual-item-icon">
+                  </div>
+                  <h3 class="visual-item-title">LAYOUT</h3>
+                  <p class="visual-item-desc">Grid / Index /<br>Status Bar / Data Card</p>
+                </div>
+                <!-- Visual Item 4: Image -->
+                <div class="visual-system-item">
+                  <div class="visual-item-icon-wrapper">
+                    <img src="assets/image.svg?v=2.5" alt="Image SVG" class="visual-item-icon">
+                  </div>
+                  <h3 class="visual-item-title">IMAGE</h3>
+                  <p class="visual-item-desc">CCTV / Subject /<br>Archive / Signal</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Center Footer Text -->
+        <section class="sys-center-footer">
+          <p class="sys-center-footer-text">NULL does not describe emotion. NULL records structure.</p>
+          <div class="sys-center-divider"></div>
+        </section>
+
+      </div>
+
+      <!-- ================= VIEW 2: OBSERVATION VIEW ================= -->
+
+      <div id="observation-view" class="view-panel hidden" style="max-width: 1488px !important;">
+        <!-- Main Title Section -->
+        <section class="obs-title-section">
+          <div class="obs-header-tag">Ø/01 // CAMERA CHANNEL INDEX</div>
+          <h1 class="obs-main-title" id="obs-page-title">OBSERVATION</h1>
+          <p class="obs-description">관찰 대상의 실시간 피드와 저장된 데이터를 확인하십시오. 접속 권한에 따라 채널 상태가 다를 수 있습니다.</p>
+        </section>
+
+        <!-- Surveillance Grid Section -->
+        <section class="obs-grid-section">
+          <div class="obs-main-feed">
+            <div class="main-feed-wrapper">
+              <video src="assets/CH-01.mp4" autoplay loop muted playsinline id="main-feed-img"
+                class="surveillance-img"></video>
+              <div class="scanline-overlay" style="background-image: url('assets/scanline.png');"></div>
+
+
+
+              <!-- Overlays -->
+              <div class="feed-overlay-top-right">
+                <div class="rec-indicator">
+                  <span class="rec-dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Side Feeds Column -->
+          <div class="obs-side-feeds">
+            <!-- CH-02 -->
+            <div class="side-feed-card active" data-channel="2">
+              <div class="side-feed-thumb">
+                <img src="assets/observation_main.png" alt="CH-02">
+                <div class="side-feed-filter"></div>
+              </div>
+              <div class="side-feed-header">
+                <span class="side-feed-title">CH-02</span>
+                <span class="side-rec text-red">REC</span>
+              </div>
+              <div class="side-feed-footer">
+                <span class="side-time">14:27:31:08</span>
+                <span class="side-zone">ZONE_B2</span>
+              </div>
+            </div>
+            <!-- CH-03 -->
+            <div class="side-feed-card" data-channel="3">
+              <div class="side-feed-thumb">
+                <img src="assets/observation_main.png" alt="CH-03">
+                <div class="side-feed-filter"></div>
+              </div>
+              <div class="side-feed-header">
+                <span class="side-feed-title">CH-03</span>
+                <span class="side-rec text-red">REC</span>
+              </div>
+              <div class="side-feed-footer">
+                <span class="side-time">14:27:31:08</span>
+                <span class="side-zone">ZONE_C3</span>
+              </div>
+            </div>
+            <!-- CH-04 -->
+            <div class="side-feed-card" data-channel="4">
+              <div class="side-feed-thumb">
+                <img src="assets/observation_main.png" alt="CH-04">
+                <div class="side-feed-filter"></div>
+              </div>
+              <div class="side-feed-header">
+                <span class="side-feed-title">CH-04</span>
+                <span class="side-rec text-red">REC</span>
+              </div>
+              <div class="side-feed-footer">
+                <span class="side-time">14:27:31:08</span>
+                <span class="side-zone">ZONE_D4</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Focus Extraction Section -->
+        <section class="focus-extraction-section">
+          <div class="focus-header">
+            <span class="focus-dot"></span>
+            <span class="focus-title">FOCUS EXTRACTION</span>
+          </div>
+
+          <div class="focus-grid">
+            <!-- Left Card: Crop View -->
+            <div class="focus-card extraction-image-card">
+              <div class="rec-overlay">
+                <span class="rec-dot"></span>
+                <span class="rec-text text-red">REC</span>
+              </div>
+              <div class="time-overlay" id="focus-time-overlay">2026-06-08 01:47:31</div>
+
+              <div class="cropped-subject-wrapper">
+                <div class="cropped-subject-view" id="cropped-subject-view">
+                  <video src="assets/observation mini.mp4" autoplay loop muted playsinline
+                    class="cropped-subject-img"></video>
+                </div>
+                <div class="cropped-subject-overlay">
+                  <span class="crosshair-plus">+</span>
+                </div>
+                <div class="cropped-subject-tag">SUBJECT 091</div>
+              </div>
+
+              <!-- Corners -->
+              <div class="corner corner-tl"></div>
+              <div class="corner corner-tr"></div>
+              <div class="corner corner-bl"></div>
+              <div class="corner corner-br"></div>
+            </div>
+
+            <!-- Center Card: Details -->
+            <div class="focus-card subject-details-card">
+              <h3 class="focus-card-title" id="focus-subject-id">SUBJECT_009</h3>
+              <div class="subject-details-list">
+                <div class="detail-row">
+                  <span class="detail-label">ZONE</span>
+                  <span class="detail-val" id="focus-zone">A1</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">POSITION</span>
+                  <span class="detail-val" id="focus-pos">32, 7741, -96.7970</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">TIME</span>
+                  <span class="detail-val" id="focus-time">14:27:31:08</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">DURATION</span>
+                  <span class="detail-val" id="focus-duration">00:00:12:14</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">TRACK ID</span>
+                  <span class="detail-val" id="focus-track-id">TRK_8891</span>
+                </div>
+              </div>
+
+              <!-- Behavior Vector waveform -->
+              <div class="behavior-vector-section">
+                <div class="vector-title">BEHAVIOR VECTOR</div>
+                <div class="behavior-vector-chart" id="behavior-vector-chart">
+                  <!-- JS will generate 45 bars representing vector telemetry -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Card: Summary -->
+            <div class="focus-card activity-summary-card">
+              <h3 class="focus-card-title">ACTIVITY SUMMARY</h3>
+              <div class="subject-details-list">
+                <div class="detail-row">
+                  <span class="detail-label">DIRECTION</span>
+                  <span class="detail-val" id="focus-dir">NORTH</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">SPEED</span>
+                  <span class="detail-val" id="focus-speed">1.2m/s</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">INTERACTION</span>
+                  <span class="detail-val" id="focus-interaction">NONE</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">CROWN DENSITY</span>
+                  <span class="detail-val" id="focus-density">MEDIUM</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">ANOMALY SCORE</span>
+                  <span class="detail-val" id="focus-anomaly">0.12</span>
+                </div>
+              </div>
+
+              <!-- Confidence progress bar -->
+              <div class="confidence-section">
+                <div class="confidence-header">
+                  <span class="confidence-label">CONFIDENCE</span>
+                  <span class="confidence-val text-red" id="focus-confidence">87%</span>
+                </div>
+                <div class="confidence-bar-wrapper">
+                  <div class="confidence-bar-fill" id="focus-confidence-fill" style="width: 87%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Process Cards Section -->
+        <section class="obs-process-section">
+          <div class="focus-header">
+            <span class="focus-dot"></span>
+            <span class="focus-title">FOCUS EXTRACTION</span>
+          </div>
+          <div class="process-cards-grid">
+            <!-- Card 01 -->
+            <div class="process-card">
+              <div class="pcard-header">
+                <span class="pcard-num">01</span>
+                <span class="pcard-status text-red"><span class="rec-dot"></span> LIVE</span>
+              </div>
+              <h3 class="pcard-title">OBSERVE</h3>
+              <p class="pcard-desc">Continuous multi-channel capture of public behavior.</p>
+              <div class="pcard-metrics">
+                <div class="metric-row">
+                  <span class="metric-label">STATUS</span>
+                  <span class="metric-val">RECORDING</span>
+                </div>
+                <div class="metric-row">
+                  <span class="metric-label">CHANNELS</span>
+                  <span class="metric-val">04</span>
+                </div>
+                <div class="metric-row">
+                  <span class="metric-label">FRAME RATE</span>
+                  <span class="metric-val">25 FPS</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 02 -->
+            <div class="process-card">
+              <div class="pcard-header">
+                <span class="pcard-num">02</span>
+                <span class="pcard-status text-red"><span class="rec-dot"></span> ACTIVE</span>
+              </div>
+              <h3 class="pcard-title">OBSERVE</h3>
+              <p class="pcard-desc">Behavior is analyzed and classified in real time.</p>
+              <div class="pcard-metrics">
+                <div class="metric-row">
+                  <span class="metric-label">STATUS</span>
+                  <span class="metric-val">ANALYZING</span>
+                </div>
+                <div class="metric-row">
+                  <span class="metric-label">MODELS</span>
+                  <span class="metric-val">12</span>
+                </div>
+                <div class="metric-row">
+                  <span class="metric-label">CONFIDENCE AVG</span>
+                  <span class="metric-val">82%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 03 -->
+            <div class="process-card">
+              <div class="pcard-header">
+                <span class="pcard-num">03</span>
+                <span class="pcard-status text-red"><span class="rec-dot"></span> READY</span>
+              </div>
+              <h3 class="pcard-title">OUTPUT</h3>
+              <p class="pcard-desc">Structured insight is generated for further analysis.</p>
+              <div class="pcard-metrics">
+                <div class="metric-row">
+                  <span class="metric-label">STATUS</span>
+                  <span class="metric-val">STANDBY</span>
+                </div>
+                <div class="metric-row">
+                  <span class="metric-label">QUEUED</span>
+                  <span class="metric-val">07</span>
+                </div>
+                <div class="metric-row">
+                  <span class="metric-label">LAST OUTPUT</span>
+                  <span class="metric-val">14:27:30</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- bottom grid stats & log -->
+        <section class="obs-status-section">
+          <!-- Live Feed Status (Left) -->
+          <div class="live-feed-status-wrapper">
+            <div class="focus-header">
+              <span class="focus-dot"></span>
+              <span class="focus-title">LIVE FEED STATUS</span>
+            </div>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-title">SYSTEM UPTIME</div>
+                <div class="stat-value" id="uptime-display-obs">72:14:03:21</div>
+                <div class="stat-unit">DAYS • HRS • MIN • SEC</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-title">ACTIVE SUBJECTS</div>
+                <div class="stat-value">237 <span class="stat-arrow text-red">↑ 12%</span></div>
+                <div class="stat-unit">VS PREV. HOUR</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-title">EVENTS FLAGGED</div>
+                <div class="stat-value">03 <span class="stat-arrow text-red">↑ 25%</span></div>
+                <div class="stat-unit">VS PREV. HOUR</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-title">DETECTION RATE</div>
+                <div class="stat-value">99.92%</div>
+                <div class="stat-unit text-red">NOMINAL</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- System Log (Right) -->
+          <div class="system-log-wrapper">
+            <div class="focus-header">
+              <span class="focus-dot"></span>
+              <span class="focus-title">SYSTEM LOG</span>
+            </div>
+            <div class="log-table-container">
+              <table class="log-table" id="log-table">
+                <tbody>
+                  <!-- Log entries will go here dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ================= VIEW 4: SUBJECT OBSERVATION VIEW ================= -->
+      <div id="subject-observation-view" class="view-panel hidden" style="max-width: 1488px !important;">
+
+        <!-- Title Section -->
+        <section class="sub-title-section">
+          <div class="sub-header-tag">Ø/01 // SUBJECT OBSERVATION</div>
+          <h1 class="sub-main-title">SUBJECT OBSERVATION</h1>
+          <p class="sub-description">관찰 대상의 실시간 피드와 저장된 데이터를 확인하십시오. 접속 권한에 따라 채널 상태가 다를 수 있습니다.</p>
+        </section>
+
+        <!-- Top Split Section: CCTV & Subject Data -->
+        <section class="sub-top-grid">
+          <!-- CCTV Panel -->
+          <div class="sub-cctv-card">
+            <div class="sub-cctv-header">
+              <span class="sub-cctv-title">FOCUS EXTRACTION</span>
+              <span class="sub-cctv-status text-red"><span class="rec-dot"></span> SUBJECT_091</span>
+            </div>
+
+            <div class="sub-cctv-viewport">
+              <img src="assets/subject_cctv.png" alt="CCTV Footage" class="sub-cctv-img">
+              <div class="scanline-overlay" style="background-image: url('assets/scanline.png');"></div>
+
+              <!-- Overlays -->
+              <span class="sub-cctv-cam">CAM_01</span>
+              <div class="sub-cctv-time">
+                <div class="date">2024-05-12</div>
+                <div class="time">14:31:08</div>
+              </div>
+              <div class="sub-cctv-loc">
+                <div class="ch">CH-01</div>
+                <div class="loc">CONCOURSE A</div>
+              </div>
+              <div class="sub-cctv-rec">
+                <span>REC</span>
+                <span class="rec-dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subject Data Panel -->
+          <div class="sub-data-card">
+            <h3 class="sub-data-title">SUBJECT DATA</h3>
+            <div class="sub-data-table">
+              <div class="sub-data-row">
+                <span class="sub-label">SUBJECT ID</span>
+                <span class="sub-val" id="sub-data-id">SUBJECT_091</span>
+              </div>
+              <div class="sub-data-row">
+                <span class="sub-label">CAMERA</span>
+                <span class="sub-val" id="sub-data-camera">CH-01</span>
+              </div>
+              <div class="sub-data-row">
+                <span class="sub-label">ZONE</span>
+                <span class="sub-val" id="sub-data-zone">A1</span>
+              </div>
+              <div class="sub-data-row">
+                <span class="sub-label">LOCATION</span>
+                <span class="sub-val" id="sub-data-loc">CONCOURSE A</span>
+              </div>
+              <div class="sub-data-row">
+                <span class="sub-label">FIRST SEEN</span>
+                <span class="sub-val" id="sub-data-first">14:31:08</span>
+              </div>
+              <div class="sub-data-row">
+                <span class="sub-label">LAST SEEN</span>
+                <span class="sub-val" id="sub-data-last">14:37:12</span>
+              </div>
+              <div class="sub-data-row">
+                <span class="sub-label">DURATION</span>
+                <span class="sub-val" id="sub-data-dur">00:06:04</span>
+              </div>
+              <div class="sub-data-row">
+                <span class="sub-label">TRACK ID</span>
+                <span class="sub-val" id="sub-data-track">091-A-072</span>
+              </div>
+              <div class="sub-data-row last-row">
+                <span class="sub-label">STATUS</span>
+                <span class="sub-val text-red font-bold">MONITORED</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Middle Section: Observation Values Grid -->
+        <section class="sub-values-section">
+          <h3 class="sub-section-title">OBSERVATION VALUES</h3>
+          <div class="sub-values-grid">
+            <!-- 1. Movement -->
+            <div class="sub-val-card">
+              <span class="val-label">MOVEMENT</span>
+              <img src="assets/movement.svg" alt="Movement" class="val-icon">
+              <span class="val-text" id="sub-val-move">NORMAL</span>
+            </div>
+            <!-- 2. Direction -->
+            <div class="sub-val-card">
+              <span class="val-label">DIRECTION</span>
+              <img src="assets/direction.svg" alt="Direction" class="val-icon">
+              <span class="val-text" id="sub-val-dir">0° 287"</span>
+            </div>
+            <!-- 3. Speed -->
+            <div class="sub-val-card">
+              <span class="val-label">SPEED</span>
+              <img src="assets/speed.svg" alt="Speed" class="val-icon">
+              <span class="val-text" id="sub-val-speed">1.2 M/S</span>
+            </div>
+            <!-- 4. Distance -->
+            <div class="sub-val-card">
+              <span class="val-label">DISTANCE</span>
+              <img src="assets/distance.svg" alt="Distance" class="val-icon">
+              <span class="val-text" id="sub-val-dist">12.4 --M</span>
+            </div>
+            <!-- 5. Dwell Time -->
+            <div class="sub-val-card">
+              <span class="val-label">DWELL TIME</span>
+              <img src="assets/dwell_time.svg" alt="Dwell Time" class="val-icon">
+              <span class="val-text" id="sub-val-dwell">00:02:14</span>
+            </div>
+            <!-- 6. Interaction -->
+            <div class="sub-val-card">
+              <span class="val-label">INTERACTION</span>
+              <img src="assets/interaction.svg" alt="Interaction" class="val-icon">
+              <span class="val-text" id="sub-val-inter">NONE</span>
+            </div>
+            <!-- 7. Loitering -->
+            <div class="sub-val-card">
+              <span class="val-label">LOITERING</span>
+              <img src="assets/loiter.svg" alt="Loitering" class="val-icon">
+              <span class="val-text" id="sub-val-loiter">LOW</span>
+            </div>
+            <!-- 8. Signal State -->
+            <div class="sub-val-card animate-signal-border">
+              <span class="val-label text-red">SIGNAL STATE</span>
+              <img src="assets/signal_state.svg" alt="Signal State" class="val-icon">
+              <span class="val-text text-red" id="sub-val-sig">ACTIVE</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bottom Split Section: Extraction Logic & Behavior Snapshot -->
+        <section class="sub-bottom-grid">
+          <!-- Extraction Logic -->
+          <div class="sub-logic-card">
+            <h4 class="logic-label">EXTRACTION LOGIC</h4>
+            <h2 class="logic-main-title">The subject is not identified by emotion or narrative.</h2>
+            <h3 class="logic-sub-title">The system extracts only visible and measurable behavior.</h3>
+
+            <div class="logic-korean">
+              <p>피식체는 감정이나 서사로 식별되지 않는다.</p>
+              <p>시스템은 보이는 행동과 측정 가능한 상태만 추출한다.</p>
+            </div>
+          </div>
+
+          <!-- Behavior Snapshot -->
+          <div class="sub-snapshot-card">
+            <h4 class="snapshot-label">BEHAVIOR SNAPSHOT</h4>
+            <div class="snapshot-grid">
+              <!-- 01 Position -->
+              <div class="snapshot-item">
+                <div class="snap-title">01 POSITION</div>
+                <div class="snap-visual-wrapper">
+                  <img src="assets/pos_snapshot.svg" alt="Position" class="snap-visual-svg">
+                  <span class="snap-dot-red"></span>
+                </div>
+                <p class="snap-desc" id="sub-snap-desc-pos">The subject remains within Zone A1.</p>
+              </div>
+
+              <!-- 02 Motion -->
+              <div class="snapshot-item">
+                <div class="snap-title">02 MOTION</div>
+                <div class="snap-visual-wrapper">
+                  <img src="assets/motion_snapshot.svg" alt="Motion" class="snap-visual-svg">
+                </div>
+                <p class="snap-desc" id="sub-snap-desc-motion">Walking direction is stable.</p>
+              </div>
+
+              <!-- 03 Signal -->
+              <div class="snapshot-item">
+                <div class="snap-title">03 SIGNAL</div>
+                <div class="snap-visual-wrapper">
+                  <img src="assets/signal_snapshot.svg" alt="Signal" class="snap-visual-svg">
+                </div>
+                <p class="snap-desc" id="sub-snap-desc-sig">No direct interaction detected.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Next Module Banner -->
+        <section class="sub-next-banner">
+          <div class="banner-content">
+            <div class="banner-left">
+              <span class="banner-small">NEXT MODULE</span>
+              <h2 class="banner-title">BEHAVIOR CLASSIFICATION</h2>
+            </div>
+            <img src="assets/banner_arrow.svg" alt="Arrow" class="banner-arrow">
+          </div>
+          <div class="banner-right-text">
+            Extracted behavior moves into classification.
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ================= VIEW 5: BEHAVIOR ANALYSIS VIEW ================= -->
+      <div id="analysis-view" class="view-panel hidden" style="max-width: 1488px !important;">
+        <!-- Title Section -->
+        <section class="ana-title-section">
+          <div class="ana-header-tag">Ø/01 // BEHAVIOR ANALYSIS</div>
+          <h1 class="ana-main-title">BEHAVIOR ANALYSIS</h1>
+          <p class="ana-description">관찰 구역에서 수집된 행동 신호를 실시간 수치와 상태값으로 변환하여 보여주는 브랜드 리포트 대시보드입니다.</p>
+        </section>
+
+        <!-- Top Classification & Uptime widget -->
+        <section class="ana-top-widget">
+          <div class="ana-status-tag">
+            <span class="rec-dot"></span> SYSTEM CLASSIFICATION / ACTIVE
+          </div>
+          <div class="ana-status-table">
+            <div class="status-col border-r">
+              <span class="status-label">SUBJECT</span>
+              <span class="status-val text-white">009</span>
+            </div>
+            <div class="status-col border-r">
+              <span class="status-label">STATUS</span>
+              <span class="status-val text-red font-bold">REC</span>
+            </div>
+            <div class="status-col border-r">
+              <span class="status-label">UPTIME</span>
+              <span class="status-val text-white" id="ana-uptime">02:19:22</span>
+            </div>
+            <div class="status-col">
+              <span class="status-label">LOCAL</span>
+              <span class="status-val text-white" id="ana-local">05:56:43</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Row 1: Incoming Fragments & Signal Values -->
+        <section class="ana-row">
+          <!-- Incoming Fragments -->
+          <div class="ana-card half-width">
+            <div class="ana-card-header border-b">
+              <h3 class="ana-card-title">INCOMING FRAGMENTS</h3>
+              <span class="ana-card-badge text-red">37.6 / SEC</span>
+            </div>
+            <div class="fragments-list">
+              <div class="fragment-row">
+                <span class="frag-time">05:56:43</span>
+                <span class="frag-label text-red">RULE</span>
+                <span class="frag-text">INTERFACE ACTS AS A CONTROLLED BRAND SYSTEM</span>
+              </div>
+              <div class="fragment-row">
+                <span class="frag-time">05:56:42</span>
+                <span class="frag-label text-red">PAUSE</span>
+                <span class="frag-text">STATIC POSTURE DETECTED NEAR THE EDGE OF LIGHT</span>
+              </div>
+              <div class="fragment-row">
+                <span class="frag-time">05:56:41</span>
+                <span class="frag-label text-red">MOTION</span>
+                <span class="frag-text">SUBJECT ENTERED OBSERVATION ZONE AND REPEATED THE SAME ROUTE</span>
+              </div>
+              <div class="fragment-row">
+                <span class="frag-time">05:56:39</span>
+                <span class="frag-label text-red">TRACE</span>
+                <span class="frag-text">RESIDUAL OBJECT REMAINS AFTER SUBJECT EXIT</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Signal Values -->
+          <div class="ana-card half-width">
+            <div class="ana-card-header border-b">
+              <h3 class="ana-card-title">SIGNAL VALUES</h3>
+              <span class="ana-card-badge text-red">RENDERING 91%</span>
+            </div>
+            <div class="signal-bars-list">
+              <!-- Consistency -->
+              <div class="sig-bar-item">
+                <div class="sig-bar-header">
+                  <span class="sig-bar-label">CONSISTENCY</span>
+                  <span class="sig-bar-val">73%</span>
+                </div>
+                <div class="sig-bar-wrapper">
+                  <div class="sig-bar-fill" style="width: 73%;"></div>
+                </div>
+              </div>
+              <!-- Clarity -->
+              <div class="sig-bar-item">
+                <div class="sig-bar-header">
+                  <span class="sig-bar-label">CLARITY</span>
+                  <span class="sig-bar-val">67%</span>
+                </div>
+                <div class="sig-bar-wrapper">
+                  <div class="sig-bar-fill" style="width: 67%;"></div>
+                </div>
+              </div>
+              <!-- Noise -->
+              <div class="sig-bar-item">
+                <div class="sig-bar-header">
+                  <span class="sig-bar-label">NOISE</span>
+                  <span class="sig-bar-val">8%</span>
+                </div>
+                <div class="sig-bar-wrapper">
+                  <div class="sig-bar-fill" style="width: 8%;"></div>
+                </div>
+              </div>
+              <!-- Reconstruction -->
+              <div class="sig-bar-item">
+                <div class="sig-bar-header">
+                  <span class="sig-bar-label">RECONSTRUCTION</span>
+                  <span class="sig-bar-val">91%</span>
+                </div>
+                <div class="sig-bar-wrapper">
+                  <div class="sig-bar-fill" style="width: 91%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Row 2: Processing Feed & Analysis Pipeline -->
+        <section class="ana-row">
+          <!-- Processing Feed -->
+          <div class="ana-card half-width">
+            <div class="ana-card-header border-b">
+              <h3 class="ana-card-title">PROCESSING FEED</h3>
+              <span class="ana-card-badge text-red font-bold">LIVE</span>
+            </div>
+            <div class="feed-list">
+              <div class="feed-row">
+                <span class="feed-time">05:56:43</span>
+                <span class="feed-text text-red">REPORT MODULE REFRESHING</span>
+              </div>
+              <div class="feed-row">
+                <span class="feed-time">05:56:42</span>
+                <span class="feed-text text-red">REPORT MODULE REFRESHING</span>
+              </div>
+              <div class="feed-row">
+                <span class="feed-time">05:56:41</span>
+                <span class="feed-text text-red">SUBJECT LOCATION STABILIZED</span>
+              </div>
+              <div class="feed-row">
+                <span class="feed-time">05:56:39</span>
+                <span class="feed-text text-red">OBSERVATION WALL SYNCHRONIZED</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Analysis Pipeline -->
+          <div class="ana-card half-width">
+            <div class="ana-card-header border-b">
+              <h3 class="ana-card-title">ANALYSIS PIPELINE</h3>
+              <span class="ana-card-badge text-red">RECORDS 3,407</span>
+            </div>
+            <div class="pipeline-grid">
+              <!-- Collect -->
+              <div class="pipeline-item">
+                <div class="pipe-header">
+                  <span class="pipe-name">COLLECT</span>
+                  <span class="pipe-percent">100%</span>
+                </div>
+                <div class="pipe-wrapper">
+                  <div class="pipe-fill" style="width: 100%;"></div>
+                </div>
+              </div>
+              <!-- Filter -->
+              <div class="pipeline-item">
+                <div class="pipe-header">
+                  <span class="pipe-name">FILTER</span>
+                  <span class="pipe-percent">65%</span>
+                </div>
+                <div class="pipe-wrapper">
+                  <div class="pipe-fill" style="width: 65%;"></div>
+                </div>
+              </div>
+              <!-- Classify -->
+              <div class="pipeline-item">
+                <div class="pipe-header">
+                  <span class="pipe-name">CLASSIFY</span>
+                  <span class="pipe-percent">73%</span>
+                </div>
+                <div class="pipe-wrapper">
+                  <div class="pipe-fill" style="width: 73%;"></div>
+                </div>
+              </div>
+              <!-- Output -->
+              <div class="pipeline-item">
+                <div class="pipe-header">
+                  <span class="pipe-name">OUTPUT</span>
+                  <span class="pipe-percent">91%</span>
+                </div>
+                <div class="pipe-wrapper">
+                  <div class="pipe-fill" style="width: 91%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Row 3: Observe, Classify, Output Feature Cards -->
+        <section class="ana-feature-row">
+          <!-- Observe -->
+          <article class="ana-feature-card">
+            <div class="ana-feat-header">
+              <span class="ana-feat-num">01</span>
+              <span class="ana-feat-status text-red">REC</span>
+            </div>
+            <div class="ana-feat-icon-box">
+              <div class="observe-icon">
+                <div class="obs-circle-outer"></div>
+                <div class="obs-circle-inner"></div>
+                <div class="obs-cross-v"></div>
+                <div class="obs-cross-h"></div>
+              </div>
+            </div>
+            <h3 class="ana-feat-title">OBSERVE</h3>
+            <p class="ana-feat-desc">Observes where user choices begin to emerge.</p>
+            <div class="ana-feat-footer">
+              <span class="ana-feat-dots">....</span>
+              <span class="ana-feat-arrow text-red">&gt;</span>
+            </div>
+          </article>
+
+          <!-- Classify -->
+          <article class="ana-feature-card">
+            <div class="ana-feat-header">
+              <span class="ana-feat-num">02</span>
+              <span class="ana-feat-status text-red">REC</span>
+            </div>
+            <div class="ana-feat-icon-box">
+              <div class="classify-icon">
+                <div class="grid-square opacity-40"></div>
+                <div class="grid-square"></div>
+                <div class="grid-square"></div>
+                <div class="grid-square opacity-40"></div>
+              </div>
+            </div>
+            <h3 class="ana-feat-title">CLASSIFY</h3>
+            <p class="ana-feat-desc">Classifies repeated inputs by structure and rule.</p>
+            <div class="ana-feat-footer">
+              <span class="ana-feat-dots">....</span>
+              <span class="ana-feat-arrow text-red">&gt;</span>
+            </div>
+          </article>
+
+          <!-- Output -->
+          <article class="ana-feature-card">
+            <div class="ana-feat-header">
+              <span class="ana-feat-num">03</span>
+              <span class="ana-feat-status text-red">REC</span>
+            </div>
+            <div class="ana-feat-icon-box">
+              <div class="output-icon">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+              </div>
+            </div>
+            <h3 class="ana-feat-title">OUTPUT</h3>
+            <p class="ana-feat-desc">Outputs classified data as an analytical model.</p>
+            <div class="ana-feat-footer">
+              <span class="ana-feat-dots">....</span>
+              <span class="ana-feat-arrow text-red">&gt;</span>
+            </div>
+          </article>
+        </section>
+
+      </div>
+    </main>
+
+
+    <!-- Footer - Status Bar -->
+    <footer class="footer-bar">
+      <div class="status-item">
+        <span>SYSTEM STATUS / </span><span class="text-red">ACTIVE</span>
+      </div>
+      <div class="status-item font-muted">
+        LOCKED ACCESS LEVEL / PUBLIC
+      </div>
+      <div class="status-item font-muted">
+        LAST SIGNAL / DETECTED
+      </div>
+    </footer>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Scroll to top">
+    <span class="btn-arrow">▲</span>
+    <span class="btn-text">TOP</span>
+  </button>
+
+  <script src="index.js?v=2.9"></script>
+</body>
+
+</html>
