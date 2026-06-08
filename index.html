@@ -74,8 +74,8 @@
           </div>
         </div>
 
-        <a href="#archive" class="nav-link">ARCHIVE</a>
-        <a href="#protocol" class="nav-link">PROTOCOL</a>
+        <a href="#archive" class="nav-link" id="nav-archive">ARCHIVE</a>
+        <a href="#protocol" class="nav-link" id="nav-protocol">PROTOCOL</a>
       </nav>
 
       <div class="nav-badge">
@@ -99,9 +99,8 @@
         <!-- Surveillance Display -->
         <section class="surveillance-section" id="surveillance-section">
           <div class="surveillance-wrapper" id="surveillance-wrapper">
-            <video id="main-surveillance-video" src="assets/MAIN (2).mp4" muted playsinline
-              class="surveillance-video"></video>
-            <div class="scanline-overlay" style="background-image: url('assets/scanline.png');"></div>
+            <video id="main-surveillance-video" src="./assets/MAIN (2).mp4" autoplay="" muted="" loop="" playsinline="" class="surveillance-video"></video>
+            <div class="scanline-overlay" style="background-image: url('./assets/scanline.png');"></div>
 
             <!-- Fullscreen controls -->
             <div class="surv-fullscreen-control">
@@ -211,7 +210,7 @@
               <!-- Card 1: Subject -->
               <div class="data-card">
                 <div class="card-icon-wrapper">
-                  <img src="assets/subject.png" alt="Subject" class="card-icon">
+                  <img src="./assets/subject.png" alt="Subject" class="card-icon">
                 </div>
                 <div class="card-info">
                   <div class="card-title">SUBJECT_009</div>
@@ -221,7 +220,7 @@
               <!-- Card 2: Tracking -->
               <div class="data-card">
                 <div class="card-icon-wrapper">
-                  <img src="assets/tracking.png" alt="Tracking" class="card-icon">
+                  <img src="./assets/tracking.png" alt="Tracking" class="card-icon">
                 </div>
                 <div class="card-info">
                   <div class="card-title">TRACKING</div>
@@ -231,7 +230,7 @@
               <!-- Card 3: Zone -->
               <div class="data-card">
                 <div class="card-icon-wrapper">
-                  <img src="assets/zone.png" alt="Zone" class="card-icon">
+                  <img src="./assets/zone.png" alt="Zone" class="card-icon">
                 </div>
                 <div class="card-info">
                   <div class="card-title">ZONE</div>
@@ -241,7 +240,7 @@
               <!-- Card 4: Feed Quality -->
               <div class="data-card">
                 <div class="card-icon-wrapper">
-                  <img src="assets/feed_quality.png" alt="Feed Quality" class="card-icon">
+                  <img src="./assets/feed_quality.png" alt="Feed Quality" class="card-icon">
                 </div>
                 <div class="card-info">
                   <div class="card-title">FEED QUALITY</div>
@@ -251,7 +250,7 @@
               <!-- Card 5: Time Sync -->
               <div class="data-card">
                 <div class="card-icon-wrapper">
-                  <img src="assets/time_sync.png" alt="Time Sync" class="card-icon">
+                  <img src="./assets/time_sync.png" alt="Time Sync" class="card-icon">
                 </div>
                 <div class="card-info">
                   <div class="card-title">TIME SYNC</div>
@@ -304,7 +303,7 @@
                   <h3 class="keyword-card-title">NEUTRAL</h3>
                   <p class="keyword-card-desc">Emotion is removed.<br>Only behavior remains.</p>
                   <div class="keyword-card-icon">
-                    <img src="assets/neutral.svg" alt="Neutral Icon">
+                    <img src="./assets/neutral.svg" alt="Neutral Icon">
                   </div>
                 </div>
                 <!-- Card 2: Structural -->
@@ -313,7 +312,7 @@
                   <h3 class="keyword-card-title">STRUCTURAL</h3>
                   <p class="keyword-card-desc">Every signal is<br>organized by rule.</p>
                   <div class="keyword-card-icon">
-                    <img src="assets/structural.svg" alt="Structural Icon">
+                    <img src="./assets/structural.svg" alt="Structural Icon">
                   </div>
                 </div>
                 <!-- Card 3: Functional -->
@@ -322,7 +321,7 @@
                   <h3 class="keyword-card-title">FUNCTIONAL</h3>
                   <p class="keyword-card-desc">The interface is<br>the brand.</p>
                   <div class="keyword-card-icon">
-                    <img src="assets/functional.svg" alt="Functional Icon">
+                    <img src="./assets/functional.svg" alt="Functional Icon">
                   </div>
                 </div>
                 <!-- Card 4: Controlled -->
@@ -331,7 +330,7 @@
                   <h3 class="keyword-card-title">CONTROLLED</h3>
                   <p class="keyword-card-desc">Nothing is expressive.<br>Everything is regulated.</p>
                   <div class="keyword-card-icon">
-                    <img src="assets/controlled.svg?v=2.4" alt="Controlled Icon">
+                    <img src="./assets/controlled.svg?v=2.4" alt="Controlled Icon">
                   </div>
                 </div>
               </div>
@@ -379,7 +378,7 @@
                 <!-- Visual Item 1: Color -->
                 <div class="visual-system-item">
                   <div class="visual-item-icon-wrapper">
-                    <img src="assets/color.svg?v=2.5" alt="Color SVG" class="visual-item-icon">
+                    <img src="./assets/color.svg?v=2.5" alt="Color SVG" class="visual-item-icon">
                   </div>
                   <h3 class="visual-item-title">COLOR</h3>
                   <p class="visual-item-desc">Black / White /<br>Gray / Signal Red</p>
@@ -395,7 +394,7 @@
                 <!-- Visual Item 3: Layout -->
                 <div class="visual-system-item">
                   <div class="visual-item-icon-wrapper">
-                    <img src="assets/layout.svg" alt="Layout SVG" class="visual-item-icon">
+                    <img src="./assets/layout.svg" alt="Layout SVG" class="visual-item-icon">
                   </div>
                   <h3 class="visual-item-title">LAYOUT</h3>
                   <p class="visual-item-desc">Grid / Index /<br>Status Bar / Data Card</p>
@@ -403,7 +402,7 @@
                 <!-- Visual Item 4: Image -->
                 <div class="visual-system-item">
                   <div class="visual-item-icon-wrapper">
-                    <img src="assets/image.svg?v=2.5" alt="Image SVG" class="visual-item-icon">
+                    <img src="./assets/image.svg?v=2.5" alt="Image SVG" class="visual-item-icon">
                   </div>
                   <h3 class="visual-item-title">IMAGE</h3>
                   <p class="visual-item-desc">CCTV / Subject /<br>Archive / Signal</p>
@@ -455,7 +454,7 @@
             <!-- CH-02 -->
             <div class="side-feed-card active" data-channel="2">
               <div class="side-feed-thumb">
-                <img src="assets/observation_main.png" alt="CH-02">
+                <video src="./assets/CH-01.mp4" autoplay="" loop="" muted="" playsinline="" class="side-feed-video"></video>
                 <div class="side-feed-filter"></div>
               </div>
               <div class="side-feed-header">
@@ -470,7 +469,7 @@
             <!-- CH-03 -->
             <div class="side-feed-card" data-channel="3">
               <div class="side-feed-thumb">
-                <img src="assets/observation_main.png" alt="CH-03">
+                <video src="./assets/CH-02.mp4" autoplay="" loop="" muted="" playsinline="" class="side-feed-video"></video>
                 <div class="side-feed-filter"></div>
               </div>
               <div class="side-feed-header">
@@ -485,7 +484,7 @@
             <!-- CH-04 -->
             <div class="side-feed-card" data-channel="4">
               <div class="side-feed-thumb">
-                <img src="assets/observation_main.png" alt="CH-04">
+                <video src="./assets/CH-03.mp4" autoplay="" loop="" muted="" playsinline="" class="side-feed-video"></video>
                 <div class="side-feed-filter"></div>
               </div>
               <div class="side-feed-header">
@@ -756,12 +755,12 @@
           <div class="sub-cctv-card">
             <div class="sub-cctv-header">
               <span class="sub-cctv-title">FOCUS EXTRACTION</span>
-              <span class="sub-cctv-status text-red"><span class="rec-dot"></span> SUBJECT_091</span>
+              <span class="sub-cctv-status text-red"><span class="rec-dot"></span> SUBJECT_001</span>
             </div>
 
             <div class="sub-cctv-viewport">
-              <img src="assets/subject_cctv.png" alt="CCTV Footage" class="sub-cctv-img">
-              <div class="scanline-overlay" style="background-image: url('assets/scanline.png');"></div>
+              <video src="assets/subject obser.mp4" autoplay loop muted playsinline class="sub-cctv-img"></video>
+              <div class="scanline-overlay" style="background-image: url('./assets/scanline.png');"></div>
 
               <!-- Overlays -->
               <span class="sub-cctv-cam">CAM_01</span>
@@ -786,7 +785,7 @@
             <div class="sub-data-table">
               <div class="sub-data-row">
                 <span class="sub-label">SUBJECT ID</span>
-                <span class="sub-val" id="sub-data-id">SUBJECT_091</span>
+                <span class="sub-val" id="sub-data-id">SUBJECT_001</span>
               </div>
               <div class="sub-data-row">
                 <span class="sub-label">CAMERA</span>
@@ -831,49 +830,49 @@
             <!-- 1. Movement -->
             <div class="sub-val-card">
               <span class="val-label">MOVEMENT</span>
-              <img src="assets/movement.svg" alt="Movement" class="val-icon">
+              <img src="./assets/movement.svg" alt="Movement" class="val-icon">
               <span class="val-text" id="sub-val-move">NORMAL</span>
             </div>
             <!-- 2. Direction -->
             <div class="sub-val-card">
               <span class="val-label">DIRECTION</span>
-              <img src="assets/direction.svg" alt="Direction" class="val-icon">
+              <img src="./assets/direction.svg" alt="Direction" class="val-icon">
               <span class="val-text" id="sub-val-dir">0° 287"</span>
             </div>
             <!-- 3. Speed -->
             <div class="sub-val-card">
               <span class="val-label">SPEED</span>
-              <img src="assets/speed.svg" alt="Speed" class="val-icon">
+              <img src="./assets/speed.svg" alt="Speed" class="val-icon">
               <span class="val-text" id="sub-val-speed">1.2 M/S</span>
             </div>
             <!-- 4. Distance -->
             <div class="sub-val-card">
               <span class="val-label">DISTANCE</span>
-              <img src="assets/distance.svg" alt="Distance" class="val-icon">
+              <img src="./assets/distance.svg" alt="Distance" class="val-icon">
               <span class="val-text" id="sub-val-dist">12.4 --M</span>
             </div>
             <!-- 5. Dwell Time -->
             <div class="sub-val-card">
               <span class="val-label">DWELL TIME</span>
-              <img src="assets/dwell_time.svg" alt="Dwell Time" class="val-icon">
+              <img src="./assets/dwell_time.svg" alt="Dwell Time" class="val-icon">
               <span class="val-text" id="sub-val-dwell">00:02:14</span>
             </div>
             <!-- 6. Interaction -->
             <div class="sub-val-card">
               <span class="val-label">INTERACTION</span>
-              <img src="assets/interaction.svg" alt="Interaction" class="val-icon">
+              <img src="./assets/interaction.svg" alt="Interaction" class="val-icon">
               <span class="val-text" id="sub-val-inter">NONE</span>
             </div>
             <!-- 7. Loitering -->
             <div class="sub-val-card">
               <span class="val-label">LOITERING</span>
-              <img src="assets/loiter.svg" alt="Loitering" class="val-icon">
+              <img src="./assets/loiter.svg" alt="Loitering" class="val-icon">
               <span class="val-text" id="sub-val-loiter">LOW</span>
             </div>
             <!-- 8. Signal State -->
             <div class="sub-val-card animate-signal-border">
               <span class="val-label text-red">SIGNAL STATE</span>
-              <img src="assets/signal_state.svg" alt="Signal State" class="val-icon">
+              <img src="./assets/signal_state.svg" alt="Signal State" class="val-icon">
               <span class="val-text text-red" id="sub-val-sig">ACTIVE</span>
             </div>
           </div>
@@ -901,7 +900,7 @@
               <div class="snapshot-item">
                 <div class="snap-title">01 POSITION</div>
                 <div class="snap-visual-wrapper">
-                  <img src="assets/pos_snapshot.svg" alt="Position" class="snap-visual-svg">
+                  <img src="./assets/pos_snapshot.svg" alt="Position" class="snap-visual-svg">
                   <span class="snap-dot-red"></span>
                 </div>
                 <p class="snap-desc" id="sub-snap-desc-pos">The subject remains within Zone A1.</p>
@@ -911,7 +910,7 @@
               <div class="snapshot-item">
                 <div class="snap-title">02 MOTION</div>
                 <div class="snap-visual-wrapper">
-                  <img src="assets/motion_snapshot.svg" alt="Motion" class="snap-visual-svg">
+                  <img src="./assets/motion_snapshot.svg" alt="Motion" class="snap-visual-svg">
                 </div>
                 <p class="snap-desc" id="sub-snap-desc-motion">Walking direction is stable.</p>
               </div>
@@ -920,7 +919,7 @@
               <div class="snapshot-item">
                 <div class="snap-title">03 SIGNAL</div>
                 <div class="snap-visual-wrapper">
-                  <img src="assets/signal_snapshot.svg" alt="Signal" class="snap-visual-svg">
+                  <img src="./assets/signal_snapshot.svg" alt="Signal" class="snap-visual-svg">
                 </div>
                 <p class="snap-desc" id="sub-snap-desc-sig">No direct interaction detected.</p>
               </div>
@@ -935,7 +934,7 @@
               <span class="banner-small">NEXT MODULE</span>
               <h2 class="banner-title">BEHAVIOR CLASSIFICATION</h2>
             </div>
-            <img src="assets/banner_arrow.svg" alt="Arrow" class="banner-arrow">
+            <img src="./assets/banner_arrow.svg" alt="Arrow" class="banner-arrow">
           </div>
           <div class="banner-right-text">
             Extracted behavior moves into classification.
@@ -984,7 +983,7 @@
           <div class="ana-card half-width">
             <div class="ana-card-header border-b">
               <h3 class="ana-card-title">INCOMING FRAGMENTS</h3>
-              <span class="ana-card-badge text-red">37.6 / SEC</span>
+              <span class="ana-card-badge text-red" id="ana-incoming-fragments-val">37.6 / SEC</span>
             </div>
             <div class="fragments-list">
               <div class="fragment-row">
@@ -1014,47 +1013,47 @@
           <div class="ana-card half-width">
             <div class="ana-card-header border-b">
               <h3 class="ana-card-title">SIGNAL VALUES</h3>
-              <span class="ana-card-badge text-red">RENDERING 91%</span>
+              <span class="ana-card-badge text-red" id="ana-rendering-badge">RENDERING 91%</span>
             </div>
             <div class="signal-bars-list">
               <!-- Consistency -->
               <div class="sig-bar-item">
                 <div class="sig-bar-header">
                   <span class="sig-bar-label">CONSISTENCY</span>
-                  <span class="sig-bar-val">73%</span>
+                  <span class="sig-bar-val" id="ana-sig-consistency-val">73%</span>
                 </div>
                 <div class="sig-bar-wrapper">
-                  <div class="sig-bar-fill" style="width: 73%;"></div>
+                  <div class="sig-bar-fill" id="ana-sig-consistency-fill" style="width: 73%;"></div>
                 </div>
               </div>
               <!-- Clarity -->
               <div class="sig-bar-item">
                 <div class="sig-bar-header">
                   <span class="sig-bar-label">CLARITY</span>
-                  <span class="sig-bar-val">67%</span>
+                  <span class="sig-bar-val" id="ana-sig-clarity-val">67%</span>
                 </div>
                 <div class="sig-bar-wrapper">
-                  <div class="sig-bar-fill" style="width: 67%;"></div>
+                  <div class="sig-bar-fill" id="ana-sig-clarity-fill" style="width: 67%;"></div>
                 </div>
               </div>
               <!-- Noise -->
               <div class="sig-bar-item">
                 <div class="sig-bar-header">
                   <span class="sig-bar-label">NOISE</span>
-                  <span class="sig-bar-val">8%</span>
+                  <span class="sig-bar-val" id="ana-sig-noise-val">8%</span>
                 </div>
                 <div class="sig-bar-wrapper">
-                  <div class="sig-bar-fill" style="width: 8%;"></div>
+                  <div class="sig-bar-fill" id="ana-sig-noise-fill" style="width: 8%;"></div>
                 </div>
               </div>
               <!-- Reconstruction -->
               <div class="sig-bar-item">
                 <div class="sig-bar-header">
                   <span class="sig-bar-label">RECONSTRUCTION</span>
-                  <span class="sig-bar-val">91%</span>
+                  <span class="sig-bar-val" id="ana-sig-reconstruction-val">91%</span>
                 </div>
                 <div class="sig-bar-wrapper">
-                  <div class="sig-bar-fill" style="width: 91%;"></div>
+                  <div class="sig-bar-fill" id="ana-sig-reconstruction-fill" style="width: 91%;"></div>
                 </div>
               </div>
             </div>
@@ -1069,7 +1068,7 @@
               <h3 class="ana-card-title">PROCESSING FEED</h3>
               <span class="ana-card-badge text-red font-bold">LIVE</span>
             </div>
-            <div class="feed-list">
+            <div class="feed-list" id="ana-feed-list">
               <div class="feed-row">
                 <span class="feed-time">05:56:43</span>
                 <span class="feed-text text-red">REPORT MODULE REFRESHING</span>
@@ -1093,47 +1092,47 @@
           <div class="ana-card half-width">
             <div class="ana-card-header border-b">
               <h3 class="ana-card-title">ANALYSIS PIPELINE</h3>
-              <span class="ana-card-badge text-red">RECORDS 3,407</span>
+              <span class="ana-card-badge text-red" id="ana-records-badge">RECORDS 3,407</span>
             </div>
             <div class="pipeline-grid">
               <!-- Collect -->
               <div class="pipeline-item">
                 <div class="pipe-header">
                   <span class="pipe-name">COLLECT</span>
-                  <span class="pipe-percent">100%</span>
+                  <span class="pipe-percent" id="ana-pipe-collect-val">100%</span>
                 </div>
                 <div class="pipe-wrapper">
-                  <div class="pipe-fill" style="width: 100%;"></div>
+                  <div class="pipe-fill" id="ana-pipe-collect-fill" style="width: 100%;"></div>
                 </div>
               </div>
               <!-- Filter -->
               <div class="pipeline-item">
                 <div class="pipe-header">
                   <span class="pipe-name">FILTER</span>
-                  <span class="pipe-percent">65%</span>
+                  <span class="pipe-percent" id="ana-pipe-filter-val">65%</span>
                 </div>
                 <div class="pipe-wrapper">
-                  <div class="pipe-fill" style="width: 65%;"></div>
+                  <div class="pipe-fill" id="ana-pipe-filter-fill" style="width: 65%;"></div>
                 </div>
               </div>
               <!-- Classify -->
               <div class="pipeline-item">
                 <div class="pipe-header">
                   <span class="pipe-name">CLASSIFY</span>
-                  <span class="pipe-percent">73%</span>
+                  <span class="pipe-percent" id="ana-pipe-classify-val">73%</span>
                 </div>
                 <div class="pipe-wrapper">
-                  <div class="pipe-fill" style="width: 73%;"></div>
+                  <div class="pipe-fill" id="ana-pipe-classify-fill" style="width: 73%;"></div>
                 </div>
               </div>
               <!-- Output -->
               <div class="pipeline-item">
                 <div class="pipe-header">
                   <span class="pipe-name">OUTPUT</span>
-                  <span class="pipe-percent">91%</span>
+                  <span class="pipe-percent" id="ana-pipe-output-val">91%</span>
                 </div>
                 <div class="pipe-wrapper">
-                  <div class="pipe-fill" style="width: 91%;"></div>
+                  <div class="pipe-fill" id="ana-pipe-output-fill" style="width: 91%;"></div>
                 </div>
               </div>
             </div>
@@ -1209,6 +1208,624 @@
         </section>
 
       </div>
+
+      <!-- ================= VIEW 6: BEHAVIOR OBSERVATION VIEW ================= -->
+      <div id="behavior-observation-view" class="view-panel hidden" style="max-width: 1488px !important;">
+        <!-- Title Section -->
+        <section class="obs-title-section">
+          <div class="obs-header-tag">Ø/01 // BEHAVIOR OBSERVATION</div>
+          <h1 class="obs-main-title">BEHAVIOR<br>OBSERVATION</h1>
+          <p class="obs-description">시스템은 움직임, 일시 중지, 방향 및 반복 동작을 기록합니다.</p>
+        </section>
+
+        <!-- Movement Path Section -->
+        <section class="bo-grid-section">
+          <!-- CCTV Panel -->
+          <div class="bo-cctv-panel">
+            <div class="bo-cctv-header">
+              <span class="bo-cctv-title">MOVEMENT PATH</span>
+              <span class="bo-cctv-subject text-red"><span class="rec-dot"></span> SUBJECT_001</span>
+            </div>
+            <div class="bo-cctv-viewport">
+              <video src="assets/subject obser.mp4" autoplay loop muted playsinline class="bo-cctv-img"></video>
+              <div class="scanline-overlay" style="background-image: url('assets/scanline.png');"></div>
+              
+              <!-- Overlays inside image matching mockup -->
+              <div class="bo-feed-overlay-bottom">
+                <span class="bo-meta-time">14:27:22:04</span>
+                <span class="bo-meta-zone">ZONE_A1</span>
+              </div>
+              
+              <div class="corner corner-tl"></div>
+              <div class="corner corner-tr"></div>
+              <div class="corner corner-bl"></div>
+              <div class="corner corner-br"></div>
+            </div>
+          </div>
+
+          <!-- Path Sidebar -->
+          <div class="bo-sidebar">
+            <div class="bo-sidebar-row border-b">
+              <span class="bo-sidebar-label text-red">PATH ID</span>
+              <span class="bo-sidebar-value text-white">SUBJECT_001</span>
+            </div>
+            <div class="bo-sidebar-row border-b">
+              <span class="bo-sidebar-label text-red">START</span>
+              <span class="bo-sidebar-value text-white">14:27:22:04</span>
+            </div>
+            <div class="bo-sidebar-row border-b">
+              <span class="bo-sidebar-label text-red">PAUSE</span>
+              <span class="bo-sidebar-value text-white">14:27:31:08</span>
+            </div>
+            <div class="bo-sidebar-row border-b">
+              <span class="bo-sidebar-label text-red">EXIT VECTOR</span>
+              <span class="bo-sidebar-value text-white">NORTH-EAST</span>
+            </div>
+            <div class="bo-sidebar-row">
+              <span class="bo-sidebar-label text-red">TRACK ID</span>
+              <span class="bo-sidebar-value text-white">TRK_8891</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Behavior Timeline Section -->
+        <section class="bo-timeline-section">
+          <div class="bo-section-header">
+            <span class="bo-header-dot"></span>
+            <span class="bo-header-title">BEHAVIOR TIMELINE</span>
+          </div>
+          <div class="bo-table-container">
+            <table class="bo-table">
+              <tbody>
+                <tr>
+                  <td class="bo-cell-idx">01</td>
+                  <td class="bo-cell-time">14:27:22:04</td>
+                  <td class="bo-cell-icon"><span class="bo-dot-empty"></span></td>
+                  <td class="bo-cell-desc text-white">Subject enters zone</td>
+                  <td class="bo-cell-zone text-muted">ZONE_A1</td>
+                </tr>
+                <tr>
+                  <td class="bo-cell-idx">02</td>
+                  <td class="bo-cell-time">14:27:25:11</td>
+                  <td class="bo-cell-icon"><span class="bo-arrow-right">→</span></td>
+                  <td class="bo-cell-desc text-white">Direction change</td>
+                  <td class="bo-cell-zone text-muted">ZONE_A1</td>
+                </tr>
+                <tr>
+                  <td class="bo-cell-idx">03</td>
+                  <td class="bo-cell-time">14:27:31:08</td>
+                  <td class="bo-cell-icon"><span class="bo-dot-red-glow"></span></td>
+                  <td class="bo-cell-desc text-white">Pause detected (9.2s)</td>
+                  <td class="bo-cell-zone text-muted">ZONE_A1</td>
+                </tr>
+                <tr>
+                  <td class="bo-cell-idx">04</td>
+                  <td class="bo-cell-time">14:27:40:15</td>
+                  <td class="bo-cell-icon"><span class="bo-arrow-right">→</span></td>
+                  <td class="bo-cell-desc text-white">Direction change</td>
+                  <td class="bo-cell-zone text-muted">ZONE_A1</td>
+                </tr>
+                <tr>
+                  <td class="bo-cell-idx">05</td>
+                  <td class="bo-cell-time">14:27:52:23</td>
+                  <td class="bo-cell-icon"><span class="bo-arrow-right">→</span></td>
+                  <td class="bo-cell-desc text-white">Accelerated movement</td>
+                  <td class="bo-cell-zone text-muted">ZONE_A1</td>
+                </tr>
+                <tr>
+                  <td class="bo-cell-idx">06</td>
+                  <td class="bo-cell-time">14:28:01:19</td>
+                  <td class="bo-cell-icon"><span class="bo-exit-icon">↗</span></td>
+                  <td class="bo-cell-desc text-white">Exit zone (North-East)</td>
+                  <td class="bo-cell-zone text-muted">EXIT</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Metrics Cards Section -->
+        <section class="bo-metrics-grid">
+          <!-- Walking Speed -->
+          <div class="bo-metric-card">
+            <div class="bo-mcard-header">
+              <span class="bo-mcard-title">WALKING SPEED</span>
+              <span class="bo-mcard-dot"></span>
+            </div>
+            <div class="bo-mcard-value">
+              <span class="val-num" id="bo-metric-speed-val">1.24</span> <span class="val-unit">M/S</span>
+            </div>
+            <div class="bo-mcard-sparkline">
+              <svg viewBox="0 0 100 30" class="sparkline-svg">
+                <path d="M 0 25 L 10 23 L 20 22 L 30 24 L 40 20 L 50 18 L 60 21 L 70 23 L 80 17 L 90 15 L 100 12" fill="none" stroke="var(--accent-red)" stroke-width="1.5"></path>
+                <circle cx="100" cy="12" r="2.5" fill="var(--accent-red)"></circle>
+              </svg>
+            </div>
+            <div class="bo-mcard-footer">
+              <span class="footer-label text-muted">VS. AVG</span> <span class="footer-val text-red" id="bo-metric-speed-compare">+12%</span>
+            </div>
+          </div>
+
+          <!-- Pause Duration -->
+          <div class="bo-metric-card">
+            <div class="bo-mcard-header">
+              <span class="bo-mcard-title">PAUSE DURATION</span>
+              <span class="bo-mcard-dot"></span>
+            </div>
+            <div class="bo-mcard-value">
+              <span class="val-num" id="bo-metric-pause-val">9.2</span> <span class="val-unit">SECONDS</span>
+            </div>
+            <div class="bo-mcard-sparkline">
+              <svg viewBox="0 0 100 30" class="sparkline-svg">
+                <path d="M 0 28 L 10 25 L 20 28 L 30 20 L 40 18 L 50 25 L 60 22 L 70 19 L 80 15 L 90 20 L 100 8" fill="none" stroke="var(--accent-red)" stroke-width="1.5"></path>
+                <circle cx="100" cy="8" r="2.5" fill="var(--accent-red)"></circle>
+              </svg>
+            </div>
+            <div class="bo-mcard-footer">
+              <span class="footer-label text-muted">VS. AVG</span> <span class="footer-val text-red" id="bo-metric-pause-compare">+18%</span>
+            </div>
+          </div>
+
+          <!-- Path Consistency -->
+          <div class="bo-metric-card">
+            <div class="bo-mcard-header">
+              <span class="bo-mcard-title">PATH CONSISTENCY</span>
+              <span class="bo-mcard-dot"></span>
+            </div>
+            <div class="bo-mcard-value">
+              <span class="val-num" id="bo-metric-consistency-val">82.6</span> <span class="val-unit">%</span>
+            </div>
+            <div class="bo-mcard-sparkline">
+              <svg viewBox="0 0 100 30" class="sparkline-svg">
+                <path d="M 0 15 L 10 16 L 20 14 L 30 18 L 40 15 L 50 16 L 60 14 L 70 12 L 80 15 L 90 14 L 100 13" fill="none" stroke="var(--accent-red)" stroke-width="1.5"></path>
+                <circle cx="100" cy="13" r="2.5" fill="var(--accent-red)"></circle>
+              </svg>
+            </div>
+            <div class="bo-mcard-footer">
+              <span class="footer-label text-muted">VS. AVG</span> <span class="footer-val text-red" id="bo-metric-consistency-compare">-5%</span>
+            </div>
+          </div>
+
+          <!-- Anomaly Score -->
+          <div class="bo-metric-card">
+            <div class="bo-mcard-header">
+              <span class="bo-mcard-title">ANOMALY SCORE</span>
+              <span class="bo-mcard-dot"></span>
+            </div>
+            <div class="bo-mcard-value">
+              <span class="val-num" id="bo-metric-anomaly-val">0.18</span> <span class="val-unit">/1.00</span>
+            </div>
+            <div class="bo-mcard-sparkline">
+              <svg viewBox="0 0 100 30" class="sparkline-svg">
+                <path d="M 0 28 L 10 27 L 20 28 L 30 26 L 40 25 L 50 27 L 60 28 L 70 26 L 80 27 L 90 28 L 100 28" fill="none" stroke="var(--accent-red)" stroke-width="1.5"></path>
+                <circle cx="100" cy="28" r="2.5" fill="var(--accent-red)"></circle>
+              </svg>
+            </div>
+            <div class="bo-mcard-footer">
+              <span class="footer-label text-muted">VS. THRESHOLD</span> <span class="footer-val text-muted" id="bo-metric-anomaly-compare">LOW</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Observation Rule Panel -->
+        <section class="bo-rule-section">
+          <div class="bo-rule-tag">OBSERVATION RULE</div>
+          <div class="bo-rule-content">
+            <h2>The system does not ask why the subject moves.</h2>
+            <h2>It only records how the movement changes.</h2>
+          </div>
+        </section>
+
+        <!-- Next Module Banner -->
+        <section class="bo-next-banner" id="bo-next-banner">
+          <div class="bo-banner-content">
+            <span class="bo-banner-small text-muted">NEXT MODULE</span>
+            <h2 class="bo-banner-title">Behavior Analysis</h2>
+          </div>
+          <span class="bo-banner-arrow text-red">→</span>
+        </section>
+      </div>
+
+      <!-- ================= VIEW 7: ARCHIVE VIEW ================= -->
+      <div id="archive-view" class="view-panel hidden" style="max-width: 1488px !important;">
+        <!-- Title Section -->
+        <section class="obs-title-section">
+          <div class="obs-header-tag">Ø/01 // BEHAVIOR ANALYSIS</div>
+          <h1 class="obs-main-title">SIGNAL ARCHIVE</h1>
+          <p class="obs-description">포착된 인간의 흔적은 압축·분류·저장되어 검색 가능한 아카이브 객체로 전환됩니다.</p>
+        </section>
+
+        <!-- Main Split Grid -->
+        <section class="ar-grid-section">
+          <!-- Sidebar Index Info -->
+          <div class="ar-sidebar">
+            <div class="ar-sidebar-header">
+              <span class="ar-dot"></span>
+              <span class="ar-title">ARCHIVE INDEX</span>
+            </div>
+            <p class="ar-desc">
+              BROWSE INDEXED RECORDS OF OBSERVED BEHAVIOR. EACH ARCHIVE OBJECT CONTAINS COMPRESSED VISUAL AND METADATA TRACES FOR LONG-TERM RETENTION AND RETRIEVAL.
+            </p>
+          </div>
+
+          <!-- Archive Grid of 8 Portrait Cards -->
+          <div class="ar-cards-grid">
+            <!-- Card 1 -->
+            <div class="ar-card">
+              <div class="ar-img-wrapper">
+                <img src="assets/70e0a53407a694efccfd6d792b80ee8facf1151a.png" alt="ARC_001 portrait" class="ar-img">
+                <div class="archive-corner corner-tl"></div>
+                <div class="archive-corner corner-tr"></div>
+                <div class="archive-corner corner-bl"></div>
+                <div class="archive-corner corner-br"></div>
+              </div>
+              <div class="ar-info">
+                <div class="ar-card-header">
+                  <span class="ar-card-id">ARC_001</span>
+                  <span class="ar-card-dot"></span>
+                </div>
+                <div class="ar-card-sub text-muted">ZONE_A1 • CAM_04</div>
+                <div class="ar-card-time text-white">14:27:31:08</div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="ar-card">
+              <div class="ar-img-wrapper">
+                <img src="assets/c8f24aa3bf616510372d9985a74fbaac191b0e64.png" alt="ARC_002 portrait" class="ar-img">
+                <div class="archive-corner corner-tl"></div>
+                <div class="archive-corner corner-tr"></div>
+                <div class="archive-corner corner-bl"></div>
+                <div class="archive-corner corner-br"></div>
+              </div>
+              <div class="ar-info">
+                <div class="ar-card-header">
+                  <span class="ar-card-id">ARC_002</span>
+                  <span class="ar-card-dot"></span>
+                </div>
+                <div class="ar-card-sub text-muted">ZONE_B2 • CAM_01</div>
+                <div class="ar-card-time text-white">11:08:22:14</div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="ar-card">
+              <div class="ar-img-wrapper">
+                <img src="assets/903653b6094db1f516c1647f5c3f74606a6fed9d.png" alt="ARC_003 portrait" class="ar-img">
+                <div class="archive-corner corner-tl"></div>
+                <div class="archive-corner corner-tr"></div>
+                <div class="archive-corner corner-bl"></div>
+                <div class="archive-corner corner-br"></div>
+              </div>
+              <div class="ar-info">
+                <div class="ar-card-header">
+                  <span class="ar-card-id">ARC_003</span>
+                  <span class="ar-card-dot"></span>
+                </div>
+                <div class="ar-card-sub text-muted">ZONE_C3 • CAM_03</div>
+                <div class="ar-card-time text-white">09:47:12:05</div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="ar-card">
+              <div class="ar-img-wrapper">
+                <img src="assets/83f9ba365d370cc00af2f1d41aa4b7310f3bea6e.png" alt="ARC_004 portrait" class="ar-img">
+                <div class="archive-corner corner-tl"></div>
+                <div class="archive-corner corner-tr"></div>
+                <div class="archive-corner corner-bl"></div>
+                <div class="archive-corner corner-br"></div>
+              </div>
+              <div class="ar-info">
+                <div class="ar-card-header">
+                  <span class="ar-card-id">ARC_004</span>
+                  <span class="ar-card-dot"></span>
+                </div>
+                <div class="ar-card-sub text-muted">ZONE_D4 • CAM_02</div>
+                <div class="ar-card-time text-white">16:03:55:21</div>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="ar-card">
+              <div class="ar-img-wrapper">
+                <img src="assets/741d0fccbb03dd15b0786bca7c1c018e01f8ac1c.png" alt="ARC_005 portrait" class="ar-img">
+                <div class="archive-corner corner-tl"></div>
+                <div class="archive-corner corner-tr"></div>
+                <div class="archive-corner corner-bl"></div>
+                <div class="archive-corner corner-br"></div>
+              </div>
+              <div class="ar-info">
+                <div class="ar-card-header">
+                  <span class="ar-card-id">ARC_005</span>
+                  <span class="ar-card-dot"></span>
+                </div>
+                <div class="ar-card-sub text-muted">ZONE_A1 • CAM_06</div>
+                <div class="ar-card-time text-white">18:21:44:09</div>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="ar-card">
+              <div class="ar-img-wrapper">
+                <img src="assets/7f6187bf9dc4f5bfd7f93d409c46e871a564d119.png" alt="ARC_006 portrait" class="ar-img">
+                <div class="archive-corner corner-tl"></div>
+                <div class="archive-corner corner-tr"></div>
+                <div class="archive-corner corner-bl"></div>
+                <div class="archive-corner corner-br"></div>
+              </div>
+              <div class="ar-info">
+                <div class="ar-card-header">
+                  <span class="ar-card-id">ARC_006</span>
+                  <span class="ar-card-dot"></span>
+                </div>
+                <div class="ar-card-sub text-muted">ZONE_B1 • CAM_05</div>
+                <div class="ar-card-time text-white">07:13:02:17</div>
+              </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="ar-card">
+              <div class="ar-img-wrapper">
+                <img src="assets/30730dea55d3dfdbe2ae1474d711fe3f5fece486.png" alt="ARC_007 portrait" class="ar-img">
+                <div class="archive-corner corner-tl"></div>
+                <div class="archive-corner corner-tr"></div>
+                <div class="archive-corner corner-bl"></div>
+                <div class="archive-corner corner-br"></div>
+              </div>
+              <div class="ar-info">
+                <div class="ar-card-header">
+                  <span class="ar-card-id">ARC_007</span>
+                  <span class="ar-card-dot"></span>
+                </div>
+                <div class="ar-card-sub text-muted">ZONE_C2 • CAM_07</div>
+                <div class="ar-card-time text-white">20:11:09:18</div>
+              </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="ar-card">
+              <div class="ar-img-wrapper">
+                <img src="assets/0b7e57c9cda04380dd4c2ca5a0e04f0fed0dabb0.png" alt="ARC_008 portrait" class="ar-img">
+                <div class="archive-corner corner-tl"></div>
+                <div class="archive-corner corner-tr"></div>
+                <div class="archive-corner corner-bl"></div>
+                <div class="archive-corner corner-br"></div>
+              </div>
+              <div class="ar-info">
+                <div class="ar-card-header">
+                  <span class="ar-card-id">ARC_008</span>
+                  <span class="ar-card-dot"></span>
+                </div>
+                <div class="ar-card-sub text-muted">ZONE_D3 • CAM_01</div>
+                <div class="ar-card-time text-white">12:55:31:00</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Record Table Section -->
+        <section class="ar-table-section">
+          <div class="ar-section-header">
+            <span class="ar-header-dot"></span>
+            <span class="ar-header-title">RECORD TABLE</span>
+          </div>
+          <div class="ar-table-container">
+            <table class="ar-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>SOURCE</th>
+                  <th>TIMESTAMP</th>
+                  <th>RETENTION</th>
+                  <th class="text-right">HASH STATUS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-white">ARC_001</td>
+                  <td class="text-white">CAM_04 / ZONE_A1</td>
+                  <td class="text-white">14:27:31:08</td>
+                  <td class="text-white">90 DAYS</td>
+                  <td class="text-red text-right">VERIFIED</td>
+                </tr>
+                <tr>
+                  <td class="text-white">ARC_002</td>
+                  <td class="text-white">CAM_01 / ZONE_B2</td>
+                  <td class="text-white">11:08:22:14</td>
+                  <td class="text-white">90 DAYS</td>
+                  <td class="text-red text-right">VERIFIED</td>
+                </tr>
+                <tr>
+                  <td class="text-white">ARC_003</td>
+                  <td class="text-white">CAM_03 / ZONE_C3</td>
+                  <td class="text-white">09:47:12:05</td>
+                  <td class="text-white">90 DAYS</td>
+                  <td class="text-red text-right">VERIFIED</td>
+                </tr>
+                <tr>
+                  <td class="text-white">ARC_004</td>
+                  <td class="text-white">CAM_02 / ZONE_D4</td>
+                  <td class="text-white">16:03:55:21</td>
+                  <td class="text-white">90 DAYS</td>
+                  <td class="text-red text-right">VERIFIED</td>
+                </tr>
+                <tr>
+                  <td class="text-white">ARC_005</td>
+                  <td class="text-white">CAM_06 / ZONE_A1</td>
+                  <td class="text-white">18:21:44:09</td>
+                  <td class="text-white">90 DAYS</td>
+                  <td class="text-red text-right">VERIFIED</td>
+                </tr>
+                <tr>
+                  <td class="text-white">ARC_006</td>
+                  <td class="text-white">CAM_05 / ZONE_B1</td>
+                  <td class="text-white">07:13:02:17</td>
+                  <td class="text-white">90 DAYS</td>
+                  <td class="text-red text-right">VERIFIED</td>
+                </tr>
+                <tr>
+                  <td class="text-white">ARC_007</td>
+                  <td class="text-white">CAM_07 / ZONE_C2</td>
+                  <td class="text-white">20:11:09:18</td>
+                  <td class="text-white">90 DAYS</td>
+                  <td class="text-red text-right">VERIFIED</td>
+                </tr>
+                <tr>
+                  <td class="text-white">ARC_008</td>
+                  <td class="text-white">CAM_01 / ZONE_D3</td>
+                  <td class="text-white">12:55:31:00</td>
+                  <td class="text-white">90 DAYS</td>
+                  <td class="text-red text-right">VERIFIED</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="ar-table-footer">
+            <span class="ar-total-records text-muted">TOTAL RECORDS: 8,214</span>
+            <a href="#" class="ar-view-full text-white">VIEW FULL INDEX <span class="ar-btn-arrow">→</span></a>
+          </div>
+        </section>
+
+        <!-- Signal Snapshot Cards -->
+        <section class="ar-snapshot-section">
+          <div class="ar-section-header">
+            <span class="ar-header-dot"></span>
+            <span class="ar-header-title">SIGNAL SNAPSHOT</span>
+          </div>
+          <div class="ar-snapshot-grid">
+            <div class="ar-snap-card">
+              <div class="ar-snap-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-red)" stroke-width="1.5">
+                  <rect x="3" y="3" width="18" height="18" rx="2" stroke-dasharray="2 2"></rect>
+                  <path d="M8 8h8v8H8z" fill="var(--accent-red)" opacity="0.3"></path>
+                </svg>
+              </div>
+              <div class="ar-snap-info">
+                <span class="ar-snap-value text-white">8,214</span>
+                <span class="ar-snap-label text-muted">ARCHIVED FRAMES</span>
+                <p class="ar-snap-desc text-muted">TOTAL COMPRESSED FRAMES STORED IN ARCHIVE</p>
+              </div>
+            </div>
+            <div class="ar-snap-card">
+              <div class="ar-snap-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-red)" stroke-width="1.5">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+              </div>
+              <div class="ar-snap-info">
+                <span class="ar-snap-value text-white">237</span>
+                <span class="ar-snap-label text-muted">ACTIVE RECORDS</span>
+                <p class="ar-snap-desc text-muted">RECORDS CURRENTLY INDEXED AND ACCEPTED</p>
+              </div>
+            </div>
+            <div class="ar-snap-card">
+              <div class="ar-snap-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-red)" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="ar-snap-info">
+                <span class="ar-snap-value text-white">90 DAYS</span>
+                <span class="ar-snap-label text-muted">NOMINAL RETENTION</span>
+                <p class="ar-snap-desc text-muted">STANDARD RETENTION PERIOD FOR ALL ARCHIVE OBJECTS</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Data Retention Paragraph Section -->
+        <section class="ar-retention-text-section">
+          <div class="ar-retention-header">DATA RETENTION</div>
+          <p class="ar-retention-text text-muted">
+            ALL ARCHIVE OBJECTS ARE RETAINED FOR A MINIMUM OF 90 DAYS UNLESS OVERRIDDEN BY PROTOCOL. RETENTION POLICIES ARE DEFINED UNDER <a href="#protocol" class="text-red font-bold ar-protocol-link">SYSTEM PROTOCOL</a>.
+          </p>
+        </section>
+
+        <!-- Access Portal Banner -->
+        <section class="ar-access-portal-banner" id="ar-access-portal-banner">
+          <div class="ar-portal-left">
+            <span class="ar-portal-small text-red">ACCESS PORTAL</span>
+            <h2 class="ar-portal-title text-white">ARCHIVE ACCESS / PUBLIC INDEX</h2>
+            <p class="ar-portal-desc text-muted">QUERY THE PUBLIC INDEX OF AVAILABLE ARCHIVE OBJECTS</p>
+          </div>
+          <div class="ar-portal-right">
+            <div class="ar-portal-btn">
+              <span class="btn-text">OPEN INDEX</span>
+              <span class="btn-arrow text-red">→</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= VIEW 8: PROTOCOL VIEW ================= -->
+      <div id="protocol-view" class="view-panel hidden" style="max-width: 1488px !important;">
+        <!-- Title Section -->
+        <section class="obs-title-section">
+          <div class="obs-header-tag">Ø/01 // MANIFESTO & RULES</div>
+          <h1 class="obs-main-title">SYSTEM PROTOCOL</h1>
+          <p class="obs-description">NULL 시스템의 근본적인 목적과 관찰의 3원칙을 명시한 규격서입니다.</p>
+        </section>
+
+        <!-- Protocol Content Grid -->
+        <section class="pr-grid-section">
+          <!-- Item 01 -->
+          <div class="pr-row">
+            <div class="pr-row-left">
+              <span class="pr-row-num">01.</span>
+              <h2 class="pr-row-title text-white">PURPOSE OF EXISTENCE</h2>
+            </div>
+            <div class="pr-row-right">
+              <p class="pr-text text-white font-bold" style="font-size: 20px; margin-bottom: 16px;">우리는 감정을 해석하지 않는다. 우리는 단지 형태를 남길 뿐이다.</p>
+              <p class="pr-text text-muted">
+                NULL 시스템은 인간의 불완전한 기억과 파편화된 조각들을 관찰 가능한 상태로 압축하고, 영구적인 데이터의 형태로 치환하기 위해 설계되었다.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 02 -->
+          <div class="pr-row">
+            <div class="pr-row-left">
+              <span class="pr-row-num">02.</span>
+              <h2 class="pr-row-title text-white">THREE LAWS OF OBSERVATION</h2>
+            </div>
+            <div class="pr-row-right">
+              <div class="pr-rules-list">
+                <!-- Rule 1 -->
+                <div class="pr-rule-item">
+                  <span class="pr-rule-tag text-red">RULE 01</span>
+                  <div class="pr-rule-body">
+                    <p class="pr-text text-white">개입하지 않는다. 관찰자는 피관찰자의 선택에 어떠한 물리적, 논리적 영향도 미쳐서는 안 된다</p>
+                  </div>
+                </div>
+                <!-- Rule 2 -->
+                <div class="pr-rule-item">
+                  <span class="pr-rule-tag text-red">RULE 02</span>
+                  <div class="pr-rule-body">
+                    <p class="pr-text text-white">누락 없이 기록한다. 의미 없어 보이는 정적(Static)조차 중요한 신호 값으로 처리된다</p>
+                  </div>
+                </div>
+                <!-- Rule 3 -->
+                <div class="pr-rule-item">
+                  <span class="pr-rule-tag text-red">MOTION</span>
+                  <div class="pr-rule-body">
+                    <p class="pr-text text-white">감정을 배제한다. 모든 기억은 결국 0과 1의 구조로 분해되어 정규 아카이브(CAM_04)에 보관될 수 있다</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 03 -->
+          <div class="pr-row">
+            <div class="pr-row-left">
+              <span class="pr-row-num">03.</span>
+              <h2 class="pr-row-title text-white">DATA RETENTION POLICY</h2>
+            </div>
+            <div class="pr-row-right">
+              <p class="pr-text text-muted">
+                수집된 모든 신호는 보이드(Void) 프로세싱 코어(CAM_03)를 거쳐 압축되며, 식별 불가능한 해시로 암호화되어 ARCHIVE 섹션에 보관된다. 데이터의 폐기 권한은 오직 시스템 자체에 귀속된다.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
     </main>
 
 
@@ -1232,7 +1849,7 @@
     <span class="btn-text">TOP</span>
   </button>
 
-  <script src="index.js?v=2.9"></script>
+  <script src="./index.js?v=2.9"></script>
 </body>
 
 </html>

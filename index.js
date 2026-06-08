@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const navSystem = document.getElementById('nav-system');
   const navObservation = document.getElementById('nav-observation');
   const navAnalysis = document.getElementById('nav-analysis');
+  const navArchive = document.getElementById('nav-archive');
+  const navProtocol = document.getElementById('nav-protocol');
+  const behaviorObservationView = document.getElementById('behavior-observation-view');
+  const archiveView = document.getElementById('archive-view');
+  const protocolView = document.getElementById('protocol-view');
   const submenuItems = document.querySelectorAll('.submenu-item');
 
   // DOM Elements - System View Clocks & Stats
@@ -83,6 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
     observationView.classList.add('hidden');
     if (subjectObservationView) subjectObservationView.classList.add('hidden');
     if (analysisView) analysisView.classList.add('hidden');
+    if (behaviorObservationView) behaviorObservationView.classList.add('hidden');
+    if (archiveView) archiveView.classList.add('hidden');
+    if (protocolView) protocolView.classList.add('hidden');
 
     // Pause main page video when switching views
     const surveillanceVideo = document.getElementById('main-surveillance-video');
@@ -94,6 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
     navSystem.classList.remove('active');
     navObservation.classList.remove('active');
     if (navAnalysis) navAnalysis.classList.remove('active');
+    if (navArchive) navArchive.classList.remove('active');
+    if (navProtocol) navProtocol.classList.remove('active');
 
     // Reset active submenu indicators
     submenuItems.forEach(item => item.classList.remove('active'));
@@ -146,27 +156,29 @@ document.addEventListener('DOMContentLoaded', () => {
       const subSubject = document.getElementById('sub-obs-subject');
       if (subSubject) subSubject.classList.add('active');
       sessionStorage.setItem('lab_active_view', 'sub-observation');
+    } else if (viewName === 'behavior-observation') {
+      if (behaviorObservationView) behaviorObservationView.classList.remove('hidden');
+      if (navAnalysis) navAnalysis.classList.add('active');
+      const subBehavior = document.getElementById('sub-ana-behavior');
+      if (subBehavior) subBehavior.classList.add('active');
+      sessionStorage.setItem('lab_active_view', 'behavior-observation');
+    } else if (viewName === 'archive') {
+      if (archiveView) archiveView.classList.remove('hidden');
+      if (navArchive) navArchive.classList.add('active');
+      sessionStorage.setItem('lab_active_view', 'archive');
+    } else if (viewName === 'protocol') {
+      if (protocolView) protocolView.classList.remove('hidden');
+      if (navProtocol) navProtocol.classList.add('active');
+      sessionStorage.setItem('lab_active_view', 'protocol');
     } else {
       observationView.classList.remove('hidden');
-      
-      // Handle sub-pages
-      if (viewName === 'behavior-observation') {
-        obsPageTitle.textContent = 'BEHAVIOR OBSERVATION';
-        if (navAnalysis) navAnalysis.classList.add('active');
-        const subBehavior = document.getElementById('sub-ana-behavior');
-        if (subBehavior) subBehavior.classList.add('active');
-        sessionStorage.setItem('lab_active_view', 'behavior-observation');
-        adjustObsTelemetry('behavior');
-        switchCameraFeed(3);
-      } else {
-        obsPageTitle.textContent = 'OBSERVATION';
-        navObservation.classList.add('active');
-        const subWall = document.getElementById('sub-obs-wall');
-        if (subWall) subWall.classList.add('active');
-        sessionStorage.setItem('lab_active_view', 'observation');
-        adjustObsTelemetry('main');
-        switchCameraFeed(1);
-      }
+      obsPageTitle.textContent = 'OBSERVATION';
+      navObservation.classList.add('active');
+      const subWall = document.getElementById('sub-obs-wall');
+      if (subWall) subWall.classList.add('active');
+      sessionStorage.setItem('lab_active_view', 'observation');
+      adjustObsTelemetry('main');
+      switchCameraFeed(1);
     }
     
     // Toggle global watermark visibility (show on all views except 'home')
@@ -222,6 +234,38 @@ document.addEventListener('DOMContentLoaded', () => {
     navAnalysis.addEventListener('click', (e) => {
       e.preventDefault();
       switchView('analysis');
+    });
+  }
+
+  if (navArchive) {
+    navArchive.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchView('archive');
+    });
+  }
+
+  if (navProtocol) {
+    navProtocol.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchView('protocol');
+    });
+  }
+
+  // Bind Behavior Observation next module button to analysis
+  const boNextBanner = document.getElementById('bo-next-banner');
+  if (boNextBanner) {
+    boNextBanner.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchView('analysis');
+    });
+  }
+
+  // Bind Archive access portal banner button to protocol
+  const arProtocolLink = document.querySelector('.ar-protocol-link');
+  if (arProtocolLink) {
+    arProtocolLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchView('protocol');
     });
   }
 
@@ -410,7 +454,8 @@ document.addEventListener('DOMContentLoaded', () => {
       anomaly: '0.12',
       confidence: '87%',
       cropStyle: 'scale(1.8) translate(0%, 0%)',
-      mainStyle: 'scale(1) translate(0%, 0%)'
+      mainStyle: 'scale(1) translate(0%, 0%)',
+      videoSrc: './assets/CH-01.mp4'
     },
     2: {
       id: 'CH-02',
@@ -428,8 +473,9 @@ document.addEventListener('DOMContentLoaded', () => {
       density: 'HIGH',
       anomaly: '0.04',
       confidence: '94%',
-      cropStyle: 'scale(2.2) translate(15%, -10%)',
-      mainStyle: 'scale(1.3) translate(5%, -10%)'
+      cropStyle: 'scale(2.2) translate(0%, 0%)',
+      mainStyle: 'scale(1) translate(0%, 0%)',
+      videoSrc: './assets/CH-01.mp4'
     },
     3: {
       id: 'CH-03',
@@ -447,8 +493,9 @@ document.addEventListener('DOMContentLoaded', () => {
       density: 'LOW',
       anomaly: '0.29',
       confidence: '71%',
-      cropStyle: 'scale(2.5) translate(-15%, 5%)',
-      mainStyle: 'scale(1.6) translate(-15%, 5%)'
+      cropStyle: 'scale(2.5) translate(0%, 0%)',
+      mainStyle: 'scale(1) translate(0%, 0%)',
+      videoSrc: './assets/CH-02.mp4'
     },
     4: {
       id: 'CH-04',
@@ -466,8 +513,9 @@ document.addEventListener('DOMContentLoaded', () => {
       density: 'MEDIUM',
       anomaly: '0.67',
       confidence: '64%',
-      cropStyle: 'scale(1.9) translate(10%, 15%)',
-      mainStyle: 'scale(1.2) translate(10%, 15%)'
+      cropStyle: 'scale(1.9) translate(0%, 0%)',
+      mainStyle: 'scale(1) translate(0%, 0%)',
+      videoSrc: './assets/CH-03.mp4'
     }
   };
 
@@ -492,6 +540,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Apply digital zooming effects to give illusion of multiple channels
     mainFeedImg.style.transform = data.mainStyle;
+
+    // Swap main feed video src and play
+    if (mainFeedImg && data.videoSrc) {
+      const currentSrc = mainFeedImg.getAttribute('src');
+      if (currentSrc !== data.videoSrc) {
+        mainFeedImg.src = data.videoSrc;
+        mainFeedImg.play().catch(err => console.log("Main feed video play failed:", err));
+      }
+    }
     
     // Swap focus subject crop view image position
     const cropImg = croppedSubjectView.querySelector('.cropped-subject-img');
@@ -668,6 +725,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startClock();
     generateBehaviorVector();
     populateInitialLogs();
+    startMetricsUpdater();
     
     // Set active sub-view router (checks persisted session view, default to home)
     const activeView = sessionStorage.getItem('lab_active_view') || 'home';
@@ -964,6 +1022,168 @@ document.addEventListener('DOMContentLoaded', () => {
         transitionToSlide(1);
       }
     });
+  }
+
+  // ==========================================================================
+  // REAL-TIME METRICS UPDATER
+  // ==========================================================================
+  let metricsInterval = null;
+
+  function startMetricsUpdater() {
+    if (metricsInterval) clearInterval(metricsInterval);
+    updateAllMetrics();
+    metricsInterval = setInterval(updateAllMetrics, 2000);
+  }
+
+  function updateAllMetrics() {
+    // 1. Behavior Observation Metrics
+    const speedVal = document.getElementById('bo-metric-speed-val');
+    const speedCompare = document.getElementById('bo-metric-speed-compare');
+    if (speedVal) {
+      const baseSpeed = 1.24;
+      const currentSpeed = (baseSpeed + (Math.random() * 0.1 - 0.05)).toFixed(2);
+      speedVal.textContent = currentSpeed;
+      if (speedCompare) {
+        const pct = Math.floor(10 + Math.random() * 6); // +10% to +15%
+        speedCompare.textContent = `+${pct}%`;
+      }
+    }
+
+    const pauseVal = document.getElementById('bo-metric-pause-val');
+    const pauseCompare = document.getElementById('bo-metric-pause-compare');
+    if (pauseVal) {
+      const basePause = 9.2;
+      const currentPause = (basePause + (Math.random() * 0.8 - 0.4)).toFixed(1);
+      pauseVal.textContent = currentPause;
+      if (pauseCompare) {
+        const pct = Math.floor(15 + Math.random() * 7); // +15% to +21%
+        pauseCompare.textContent = `+${pct}%`;
+      }
+    }
+
+    const consistencyVal = document.getElementById('bo-metric-consistency-val');
+    const consistencyCompare = document.getElementById('bo-metric-consistency-compare');
+    if (consistencyVal) {
+      const baseConsistency = 82.6;
+      const currentConsistency = (baseConsistency + (Math.random() * 2.0 - 1.0)).toFixed(1);
+      consistencyVal.textContent = currentConsistency;
+      if (consistencyCompare) {
+        const pct = Math.floor(3 + Math.random() * 5); // -3% to -7%
+        consistencyCompare.textContent = `-${pct}%`;
+      }
+    }
+
+    const anomalyVal = document.getElementById('bo-metric-anomaly-val');
+    const anomalyCompare = document.getElementById('bo-metric-anomaly-compare');
+    if (anomalyVal) {
+      const baseAnomaly = 0.18;
+      const currentAnomaly = (baseAnomaly + (Math.random() * 0.06 - 0.03)).toFixed(2);
+      anomalyVal.textContent = currentAnomaly;
+      if (anomalyCompare) {
+        anomalyCompare.textContent = currentAnomaly > 0.20 ? 'MEDIUM' : 'LOW';
+      }
+    }
+
+    // 2. Behavior Analysis metrics
+    const incomingFragments = document.getElementById('ana-incoming-fragments-val');
+    if (incomingFragments) {
+      const baseFrag = 37.6;
+      const currentFrag = (baseFrag + (Math.random() * 6.0 - 3.0)).toFixed(1);
+      incomingFragments.textContent = `${currentFrag} / SEC`;
+    }
+
+    const renderingBadge = document.getElementById('ana-rendering-badge');
+    if (renderingBadge) {
+      const baseRendering = 91;
+      const currentRendering = Math.floor(baseRendering + (Math.random() * 4 - 2));
+      renderingBadge.textContent = `RENDERING ${currentRendering}%`;
+    }
+
+    // Signal Values update (Consistency, Clarity, Noise, Reconstruction)
+    updateSignalVal('ana-sig-consistency-val', 'ana-sig-consistency-fill', 73);
+    updateSignalVal('ana-sig-clarity-val', 'ana-sig-clarity-fill', 67);
+    updateSignalVal('ana-sig-noise-val', 'ana-sig-noise-fill', 8);
+    updateSignalVal('ana-sig-reconstruction-val', 'ana-sig-reconstruction-fill', 91);
+
+    // Records badge incremental update
+    const recordsBadge = document.getElementById('ana-records-badge');
+    if (recordsBadge) {
+      const currentText = recordsBadge.textContent;
+      const recordsNum = parseInt(currentText.replace(/[^0-9]/g, '')) || 3407;
+      const newRecords = recordsNum + Math.floor(Math.random() * 2) + 1; // Increment by 1 or 2
+      recordsBadge.textContent = `RECORDS ${newRecords.toLocaleString()}`;
+    }
+
+    // Analysis Pipeline values update (Collect, Filter, Classify, Output)
+    updatePipelineVal('ana-pipe-collect-val', 'ana-pipe-collect-fill', 100);
+    updatePipelineVal('ana-pipe-filter-val', 'ana-pipe-filter-fill', 65);
+    updatePipelineVal('ana-pipe-classify-val', 'ana-pipe-classify-fill', 73);
+    updatePipelineVal('ana-pipe-output-val', 'ana-pipe-output-fill', 91);
+
+    // Update processing feed list (Row 2 Processing Feed)
+    updateProcessingFeed();
+  }
+
+  function updateSignalVal(valId, fillId, base) {
+    const valEl = document.getElementById(valId);
+    const fillEl = document.getElementById(fillId);
+    if (valEl && fillEl) {
+      const minVal = base === 8 ? 2 : base - 5;
+      const maxVal = base + 5;
+      const newVal = Math.max(minVal, Math.min(maxVal, Math.floor(base + (Math.random() * 6 - 3))));
+      valEl.textContent = `${newVal}%`;
+      fillEl.style.width = `${newVal}%`;
+    }
+  }
+
+  function updatePipelineVal(valId, fillId, base) {
+    const valEl = document.getElementById(valId);
+    const fillEl = document.getElementById(fillId);
+    if (valEl && fillEl) {
+      const newVal = Math.max(10, Math.min(100, Math.floor(base + (Math.random() * 4 - 2))));
+      valEl.textContent = `${newVal}%`;
+      fillEl.style.width = `${newVal}%`;
+    }
+  }
+
+  const feedLogs = [
+    'REPORT MODULE REFRESHING',
+    'SUBJECT LOCATION STABILIZED',
+    'OBSERVATION WALL SYNCHRONIZED',
+    'SIGNAL STREAM NOMINAL',
+    'TELEMETRY DATA STREAMING',
+    'ANOMALY INDEX RECALCULATING',
+    'INTERFACE CORE RESPONDING',
+    'DATA SEGMENTS VERIFIED'
+  ];
+
+  function updateProcessingFeed() {
+    const feedList = document.getElementById('ana-feed-list');
+    if (!feedList) return;
+
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const timeStr = `${hours}:${minutes}:${seconds}`;
+
+    const randomLog = feedLogs[Math.floor(Math.random() * feedLogs.length)];
+    
+    // Create new feed row
+    const row = document.createElement('div');
+    row.classList.add('feed-row');
+    row.innerHTML = `
+      <span class="feed-time">${timeStr}</span>
+      <span class="feed-text text-red">${randomLog}</span>
+    `;
+
+    feedList.prepend(row);
+
+    // Keep only last 4 rows
+    const rows = feedList.querySelectorAll('.feed-row');
+    if (rows.length > 4) {
+      feedList.removeChild(rows[rows.length - 1]);
+    }
   }
 
   window.updateSnapScrollState = updateSnapScrollState;
